@@ -118,8 +118,12 @@
 	
 >> Interfaces and Testability
 	- It is a language construct similar to a class but it fundamentally different.
+	- Used to build loosely coupled architecture.
+	- Used for Extensibility, change the behavior of the application without changing the existing classes.
+	- Multiple interfaces can be implemented.
+	- Watch Mosh's Interfaces and Testability Part.
+	
+>> Generics
 	- 
-
->>
 	
 	
