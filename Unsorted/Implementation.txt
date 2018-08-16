@@ -1,0 +1,35 @@
+For Cavs
+******************
+Say on the Gameweek / Matchday on the Venue ;
+	1] Some x number of tickets are sold for which data is loaded in the veritix server,
+	so the VV360 API hits the services hosted at veritix server (at regular intervals) to pull 
+	the data related to tickets that are sold and the member details owning the tickets and so...
+
+	2] This data that is pulled from veritix is persisted in the VV360 DB and is then
+	processed (say like rule application if applicable for tickets/members/membership)
+
+	3] Micros POS has a application where the redemption for SV/coupons takes place after members
+	scan their ticket for SV redemption or coupon redemption and this Micros App hits the webservices 
+	hosted by VV360 API to pull data that is persisted in ( in VV360 DB ) step 2] and processes this data further 
+	and again pushes back to VV360 DB
+
+	All this communication takes place in flat files (compatible across this interface).
+
+
+For SixFlags
+******************
+Say on the Sixflags Venue ;
+	1] The Ticketing information is collected by the ticketing provider and stored on a ftp server ,
+	whereas on the other hand the SSIS jobs designed for SixFlags VV360 App ping this ftp server at regular
+	intervals to fetch the ticketing information data stored in the flat files and updates the VV360 App DB
+	with that data.
+
+	2] This data that is pulled from ftp server is then processed.
+
+	3] When a member/ ticket holder redeems a coupon if applicable , this redemption takes place Clarity
+	POS , the App for the POS where the redemption for coupons takes place after members
+	scan their ticket for  coupon redemption and this App hits the webservices 
+	hosted by VV360 API to pull data that is persisted in step 2] and processes this data further 
+	and again pushes back to VV360 DB
+
+	All this communication takes place in flat files (compatible across this interface).

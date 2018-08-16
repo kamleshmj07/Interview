@@ -1,0 +1,163 @@
+SQL Server
+**********
+What is SP ? Syntax
+A group of Transact Sql Statements planned to execute together
+
+What is function ? Syntax
+Aggregate functions / Scalar functions
+
+What is Trigger ?
+a SP that initiates an action based on event (Insert,Delete,Update)
+
+What is View ?
+a SubSet of Table , can be used to update / delete records in the table
+
+Difference between SP & Functions ?
+Function must return a value but in Stored Procedure it is optional.
+Functions can have only input parameters for it whereas Procedures can have input/output parameters .
+Functions can be called from Procedure whereas Procedures cannot be called from Function.
+Procedure allows SELECT as well as DML statement in it whereas Function allows only SELECT
+Procedures can not be utilized in a SELECT statement whereas Function can be embedded in a SELECT statement.
+
+What are joins ? Type of joins ?
+It is a clause that combines records from 2 or more tables based on a common field between them
+4 Types
+> Inner (Equi , Natural) and Outer(Left , Right , Full) 
+> Cross and Self
+* Imagine Sets
+
+What is index ?
+Storing Data Balanced Tree type structure > Fast Searches
+
+What is Clustered & Non Clustered ?
+Clustered =>  Stores the row data for a particular EmployeeID in the leaf node
+Non Clustered => EmployeeID AND a pointer to the row in the Employee table 
+
+What are the type of constraints ?
+Primary = PRIMARY KEY (ID)
+Foreign = references CUSTOMERS(ID)
+Unique
+Not Null
+Default
+Index
+
+What is Primary Key ?
+Creates clustered index and unique values and not null
+
+What is Unique Key ?
+Creates non-clustered index and unique values and accepts null
+
+Salary Query - max and 2nd max and all rows for 2nd max
+
+What are different types of SQL statements/Languages ?
+3 Basic Types
+DDL : Create, alter, drop, Grant, revoke
+DML : Delete, Insert, Select, Update
+DTL : Commit, RollBack
+
+Union vs Join ?
+Union =>O/P is Whole Set
+Join => O/P is Subset
+
+
+
+Asp.Net
+*******
+
+What is Page Life Cycle and Methods in it ?
+Basically 2 Step process : 
+1. Asp.Net Application Environment Creation (4 Main Object Creation)  (AppMgr/AppDomian,Req,Res,Context)
+2. Processing of Request (Handler, Module, Page Methods)
+
+	Both Handler & Module >> Used to Inject PreProcessing Logic 
+	like Authentication and Authorization
+	Handler : Inject based on file extensions
+	Modules : Inject based on Events of Requests (Begin,Authorize,Authenticate,etc)
+
+E ==> M ==> H ==> P
+
+SILVERU
+Start Init Load Validation Events Render Unload
+
+What are types ofValidation controls in ASP.NET?
+    RequiredFieldValidator validates compulsory/required input.
+    RegularExpressionValidator validates input value against a defined regular expression pattern.
+    RangeValidator validates the range. Validates that input falls between the given range values.
+    CompareValidator validates or compares the input of a control with another control value or with a fixed value.
+    CustomValidator allows to customize the validation logic with respect to our application logic.
+    ValidationSummary displays all errors on page collectively.
+
+Session state modes in ASP.NET?
+    In-Proc is the default approach. It stores session state locally on same web server memory where the application is running.
+    StateServer mode stores session state in a process other than the one where application is running. Naturally, it has added advantages that session state is accessible from multiple web servers in a Web Farm and also session state will remain preserved even web application is restarted.
+    SQLServer mode stores session state in SQL Server database. It has the same advantages as that of StateServer.
+    Custom modes allows to define our custom storage provider.
+    Off mode disables session storage. 
+
+State Management ? 
+HTTP is a stateless.
+(i.e. state of a webpage, a control or an object etc.)
+
+1.  Client-Side State Management
+        View State
+        Hidden Fields
+        Cookies
+        Query String
+2.  Server-Side State Management
+        Application State
+        Session State
+        Cache
+
+GridView Events
+-----------------
+RowDataBound 	Occurs when a data row is bound to data
+RowCommand
+RowEditing
+RowDeleting
+RowDeleted
+
+Repeater Events
+-----------------
+ItemDataBound	Occurs after an item in the Repeater control is data-bound 
+		but before it is rendered on the page
+ItemCreated
+ItemCommand
+
+
+Collection
+-----------
+List = Generic    		.add
+ArrayList = non Generic    	 .add .remove .search .clear
+
+OOPS
+--------
+Interface : 	Class like strucutre 
+	With no implementation
+	To achieve decoupling and enforce standardization
+
+
+
+
+
+
+
+
+
+ViewState ?
+
+What is Postback in ASP.NET?
+A postback is a request sent from a client to server from 
+the same page user is already working with.
+
+What is version of Asp.net used in last project ?
+4.0
+
+
+
+
+
+
+/*********************************************************/
+
+entityfw spellingquery compile time error
+

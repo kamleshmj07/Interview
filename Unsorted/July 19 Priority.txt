@@ -1,0 +1,44 @@
+Revise
+Glassdoor Qts for NEOSOFT
+DAL
+ADO.NET
+Collection
+WCF
+Exception
+SQL Server
+
+
+
+**********Topics***********
+1. NET Fundamentals and Basic
+----------------------------------
+Stack & Heap
+Value & Reference Type
+Boxing & UnBoxing
+Anonymous Method*
+Checked & UnChecked
+Const vs ReadOnly
+Partial classes and its 3 Uses
+
+	a. .NET Collections
+	---------------------
+	Basic Classification
+
+	b. Delegates and Events
+	-------------------------
+	Delegates & Multicast Delegates
+	Events vs Delegates ==> Listener
+
+15. WCF and Web Service
+-----------------------------
+SOA = Services + Messages
+
+14. ASP.NET
+---------------
+Asp.Net Life Cycle
+
+
+
+Skipped 
+----------
+DiffIEnum.mp4

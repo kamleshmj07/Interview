@@ -1,0 +1,20 @@
+1] Explain my role in previous projects and my Role.
+2] What challenges did you face while migrating your Asp.Net project to MVC ? Specific to MVC.
+3] How to manage Routes ?
+4] Can we have multiple Routes in RouteConfig Class ?
+5] How do you enable Attribute Routing ?
+6] Ignore a Dev route in the Prod.
+7] Different state management techniques in MVC
+8] Difference between Temp Data and Session Variable ?
+9] What is the difference while reading the data in Temp Data and Session Variable ?
+10] What is difference between ViewData and ViewBag ?
+11] How to handle concurrency in WCF ?
+12] Different Bindings in WCF.
+13] What are Named Pipes ?
+14] When do we use net.Tcp binding ?
+15] What is dual http binding ?
+16] How to Write RestFul Apis in WCF ?
+17] What is REST ?
+18] What are different HTTP Verbs in REST ?
+19] New thing learned in past 1yr.
+20] Strength of Python.

@@ -1,0 +1,125 @@
+>> What is a class ?
+	- A building block of a application.
+	- User defined data type with data fields and data members.
+	- Single Responsibility.
+
+>> What is a object ?
+	- Instance of a class that resides in a memory.
+
+>> There are 2 types of class members : Instance members and Static members.
+
+>> What is a Constructor ?
+	- It is a method that is called when an instance of a class is created to put that instance in an early state.
+	- Same name as class, no return type.
+	- Type :	1] Default Constructor / Parameterless Constructor
+				2] Paramererized Constructor
+	- Constructor overloading is possible.
+	- Using "this(...)" keyword we can pass execution or call multiple constructors on object instantiation.
+	
+>> Object Initializers
+	- Syntax/Way to set early state of an object without having a constructor.
+	
+>> Params modifier
+	- Used to pass multiple parameters to a method.
+	
+>> Ref modifier
+	- To pass a value type as a reference we use the Ref modifier.
+	
+>> Out modifier
+	- To return a value to the caller we use Out modifier, we can get multiple values using this modifier.
+	
+>> Readonly modifier
+	- Initialize a field only once. Can be initialized in a constructor.
+	- 
+	
+>> Const modifier
+	- Initialize when you declare. It is called compile-time constant.
+	- Static internally.
+	- https://stackoverflow.com/questions/55984/what-is-the-difference-between-const-and-readonly
+	- https://www.codeproject.com/Tips/803656/Practical-Difference-between-Const-ReadOnly
+	
+>> Access Modifiers
+	- Type :	1] Public
+				2] Private
+				3] Protected
+				4] Internal
+				5] Protected Internal
+
+>> Properties
+	- Class member that encapsulates a setter/getter for accessing a field.
+	- Autoimplemented properties are the ones which do not need field declaration, clr creates for us.
+	
+>> Indexers
+	- It is a way to access elements in a class that will represent a list of values.
+	- We declare indexer exactly as we declare a property.
+		public string this[string key]
+		{
+			get {...}
+			set {...}
+		}
+	- Example : HttpCookie 
+	
+>> Coupling
+	- Understand Encapsulation, Relationships between classes and Interfaces to implement loosely coupled architecture.
+	
+>> Inheritance
+	- Is-A relationship is inheritance.
+	- Benefits : Code reuse and Polymorphic behaviour.
+	
+>> Composition
+	- Has-A relationship is composition.
+	- Benefits : Code reuse, Flexibility and Loose coupling.
+	- Example : Use of DbMigrator, Logging.
+	
+>> Composition vs Inheritance
+	- Problem with inheritance :
+		1] Easily abused by amateur developers.
+		2] Large Hierarchies.
+		3] Fragility.
+		4] Tightly coupling.
+
+>> Constructor in Inheritance
+	- Base class constructors are always called first.
+	- : base(..) keyword calls parameterized Base class ctor.
+	
+>> Upcasting & Downcasting (Watch .Net/C#/Class Interfaces OOP with Mosh P15)
+	- Conversion of a derived class to base class is UPCASTING.
+		Base obj = Child obj;
+		Example : 	StreamReader takes Stream obj.
+					ArrayList takes Object obj.
+	- Conversion from a base class to derived class is DOWNCASTING.
+		Child obj = (Child)Base obj
+		
+>> "as" & "is" keyword
+	- To prevent the InvalidCastingException while downcasting we use "as" keyword.
+	- 
+	
+>> Boxing & Unboxing
+	- Value type to Reference type storing is Boxing.
+	- Reference type to Value type storing is Unboxing.
+	
+>> Method Overriding
+	- Changing the implementation of an inherited method.
+	- Default Implementation : Virtual keyword
+	  New Implementation : Override keyword
+	- 
+	
+>> Abstract Classes 
+	- No implementation for abstract member.
+	- If member is abstract then containing class needs to be declared abstract too.
+	- If a method is virtual in a non abstract class A,then class B : A need not mandatorily define or override the virtual method of class A. 
+	  To avoid this we need to make class A as abstract.
+	- Abstract class can have non abstract members.
+	- Abstract class cannot be instantiated.
+	
+>> Sealed keyword
+	- It prevents overriding of a method if applied to a method.
+	- It prevents a class to be inherited if applied to a class.
+	
+>> Interfaces and Testability
+	- It is a language construct similar to a class but it fundamentally different.
+	- 
+
+>>
+	
+	

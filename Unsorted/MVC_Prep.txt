@@ -1,0 +1,42 @@
+What is MVC ?
+Architectural pattern seperating 3 different concerns Model , View , Controller :
+Model => Classes Defined
+View => Look and feel
+Controller => Controls request
+
+What is routing ?
+Routing helps you to define a URL structure and map the URL with the controller
+routes.MapRoute()
+routeconfig Class and registered in global.asax
+
+What are the different types of results in MVC?
+ActionResult, ViewResult
+
+
+Attribute based routing ?
+[Route("Users/about")] over methods
+
+What are HTML Helpers ?
+HTML helpers help you to render HTML controls in the view
+Different Overloaded Methods
+eg: HTML.TextBox , HTML.TextBoxFor , HTML.Display , HTML.DisplayFor
+     HTML.CheckBox , HTML.Dropdownlist , Html.ActionLink
+
+Sessions in MVC?
+viewdata & viewbag
+
+Partial Views in MVC?
+Partial view is a reusable view (like a user control)
+
+Validations in MVC?
+Data Annotations
+
+
+[HttpGet] and [HttpPost]
+
+MVC 6 => ASP VNEXT
+
+WebAPI is the technology by which you can expose data over 
+HTTP following REST principles. REpresentational State Transfer
+
+SOA vs REST

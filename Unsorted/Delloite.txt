@@ -1,0 +1,39 @@
+1.What is polymorphism?
+2.What is runtime polymorphism and compile time polymorphism
+3.Difference between session and static class
+4.What is Lambda expression
+what is a singleton class. write code to create singleton object  
+difference between vector and arraylist, difference between hash table and hashmap.  
+what is immutable object. how to make a class immutable  
+what is still pooling? memory management wrt strings.  
+what is database normalisation? methods of dB normalisation.  
+joins in SQL. inner join, left outer join, self join  
+give some examples of design patters you have used in ur project. explain  
+What are annotations wrt springs? importance of it  
+Collections API, Design Patterns.
+algorithms for sorting the contents of array.
+Which is the best Sorting technique and explain it.
+What do u know about deloitte  
+Tell me about urself  
+write a c program to find the prime factors of a given number using the concept of probability.  
+Where do you see yourself in 5 years? 
+basics of ASP.NET Page Life Cycle, Web Services, WCF, SQL Server and few scenarios where I was asked to write programs as well. 2nd round was a bit tough,
+ Asked about Design patterns, Security features in Web Services, Scenario to create a Shopping Cat website spanning multiple pages. MVC related questions.
+Write an example on board illustrating about OOPS concepts.
+What is it that you did. Why this architecture why not other. What was the methodology. Design Patterns. OOPS concept in detail. Scenarios between base class and child class.
+Managerial will consist of questions like what is the complex part you implemented and how you did it
+
+Tell me about yourself
+Architecture of the project 
+State management
+Can viewstate value be changed in page cycle ? if yes then before which page cycle event ?
+Collection and What is common between all collection types , application of collection in .net framework
+CLS and CTS
+Linq
+Ado.net 
+What is Difference between Datareader and Dataset
+Connected Disconnected architecture
+Execute Reader and Execute Scalar and Execute NonQuery ,Explain in detail
+WCF and Contracts used in it 
+Clustered and Non Clustered Index
+Select Count(*) c1 , Count(*) c2 from employees returns 2 coloumns >> 100, 200 , then ExecuteScalar will retrieve which value ??

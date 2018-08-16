@@ -1,0 +1,45 @@
+>> Windows Communication Foundation	
+	- WCF is a unification technology which unites the following technologies:
+		1]NET remoting
+		2]MSMQ
+		3]Web services
+		4]COM+
+	- WCF we need to 
+		1] Creating a service (WCF Library with Service Configuration)
+	 	2] Hosting a service (Website >> WCF Service >> SVC >> Codebehind)
+	 	3] Consuming a service (Add Service Reference i.e. Wsdl link)
+
+>> Different Contracts in WCF
+	- [ServiceContract] : Applied on service interface.
+	- [OperationContract] : Applied on the service method.
+	- [DataContract] : Used on the complex type for passing the same complex type as a parameter in the OperationContract.
+	
+>> Service Library (SL) vs Service Application (SA)
+	- SL contains Interfaces and Classes
+	- SA contains SL dll and is used for hosting with use of end points.
+	
+>> EndPoints
+	- Also called as ABCs of service.
+	- A : Address (192.168.10.10)
+	  B : Bindings (http, net.tcp, net.pipe, net.msmq)
+	  C : Contracts (Interfaces and methods)
+	
+	<system.serviceModel>
+		<services>
+			<service name="MulService">
+				<endpoint address="http://xxxxx" binding="MyBinding" contract="MulServiceLibrary.IMulService"
+				behaviorConfiguration="MyBehavior" />
+			</service>
+		</services>
+		<behaviors>
+			<serviceBehaviors>
+				<behavior name="MyBehavior">
+					<serviceMetadata httpGetEnabled = "true" />
+				</behavior>
+			</serviceBehaviors>
+		</behaviors>
+	</system.serviceModel>
+	
+>> SelfHosting : Write code in c# to host wcf service, used for debugging.
+
+>> 
