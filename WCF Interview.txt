@@ -9,10 +9,6 @@
 	 	2] Hosting a service (Website >> WCF Service >> SVC >> Codebehind)
 	 	3] Consuming a service (Add Service Reference i.e. Wsdl link)
 
->> Different Contracts in WCF
-	- [ServiceContract] : Applied on service interface.
-	- [OperationContract] : Applied on the service method.
-	- [DataContract] : Used on the complex type for passing the same complex type as a parameter in the OperationContract.
 	
 >> Service Library (SL) vs Service Application (SA)
 	- SL contains Interfaces and Classes
@@ -40,6 +36,30 @@
 		</behaviors>
 	</system.serviceModel>
 	
->> SelfHosting : Write code in c# to host wcf service, used for debugging.
+>> SelfHosting : Used for writing the code in C# to host wcf service, used for debugging.
 
->> 
+>> Bindings
+	- Binding defines the channel used to communicate with the EndPoint or Service.
+	- Client communicates with the Service via Messages.
+	- Messages flow via different stages :
+		1] Protocol Channel
+			a. Transaction Protocol - Gives option to implement a logic inside a Transaction.
+			b. Reliable Messaging - Gives option to receive acknowledgement from the service.
+			c. Security Protocol - Transport Security and Message Security.
+		2] Transport Channel
+			a. Message Encoder - Gives option to encode and send messages.
+			b. Transport Protocol - The protocol we need to select or choose for sending messages.
+	- Frequently used bindings in project : http, wshttp, net.tcp
+	- Watch Manzoor's WCF Series : 
+		P012 WCF Binding in Config
+		P013 WCF Binding in Coding
+		P014 WCF Other Important Binding Properties
+	
+>> Different Contracts in WCF
+	- [ServiceContract] : Applied on service interface. Describes the operations a service performs.
+	- [OperationContract] : Applied on the service method. Describes the operations a service performs.
+	- [DataContract] : Used on the complex type for passing/receiving the same complex type to/from the OperationContract.
+	- [FaultContract] : Describes errors raised by the service and how the errors will be handled and propogated to the clients.
+	- Message Contracts : Passing message for passing specific formats.
+	
+

@@ -122,6 +122,9 @@
 	- Used for Extensibility, change the behavior of the application without changing the existing classes.
 	- Multiple interfaces can be implemented.
 	- Watch Mosh's Interfaces and Testability Part.
+		P20 Introduction Interfaces
+		P21 Interface Testability
+		P22 Interface Extensibility
 	
 >> Generics
 	- 
