@@ -1,20 +1,25 @@
 >> What is a class ?
-	- A building block of a application.
-	- User defined data type with data fields and data members.
-	- Single Responsibility.
+	- Class is a building block of an application.
+	- It is a user defined data type with data fields and data members.
+	- Ideally a class should follow Single Responsibility Principle (SRP).
 
 >> What is a object ?
 	- Instance of a class that resides in a memory.
 
->> There are 2 types of class members : Instance members and Static members.
+>> What are different types of class members ?
+	- There are 2 types of class members : Instance members and Static members.
 
 >> What is a Constructor ?
 	- It is a method that is called when an instance of a class is created to put that instance in an early state.
-	- Same name as class, no return type.
-	- Type :	1] Default Constructor / Parameterless Constructor
-				2] Paramererized Constructor
-	- Constructor overloading is possible.
+	- It has same name as class & no return type.
 	- Using "this(...)" keyword we can pass execution or call multiple constructors on object instantiation.
+	
+>> What are type of Constructors ?	
+	- 2 Types :	1] Default Constructor / Parameterless Constructor
+				2] Paramererized Constructor
+
+>> Is Constructor overloading possible ?
+	- Constructor overloading is possible.
 	
 >> Object Initializers
 	- Syntax/Way to set early state of an object without having a constructor.
@@ -130,3 +135,6 @@
 	- 
 	
 	
+Articles :
+==========
+http://www.yoda.arachsys.com/csharp/
