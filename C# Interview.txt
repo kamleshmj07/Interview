@@ -97,7 +97,7 @@
 		
 >> "as" & "is" keyword
 	- To prevent the InvalidCastingException while downcasting we use "as" keyword.
-	- 
+	- we use the "is" operator to check the object type
 	
 >> Boxing & Unboxing / ValueType & Reference Type
 	- Value type to Reference type storing is Boxing.
@@ -147,15 +147,28 @@
 	- IEnumerator allows to iterate through the collection by exposing a Current property and Move,Next and Reset methods, if we don't have this interface as a parent then we can’t use foreach loop or can’t use that class object in our LINQ query.
 
 
+
 >> Generics
 	- 
 Additional Qns
 --------------
 What happens if the inherited interfaces have conflicting method names?
 What are the differences between IEnumerable and IQueryable?
-What is delegates in C# and uses of delegates?
+What is delegates in C# and uses of delegates? https://www.c-sharpcorner.com/UploadFile/f954f5/delegate-in-C-Sharp/
 What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
+Exception Handling in C# : https://www.c-sharpcorner.com/article/exception-handling-in-C-Sharp/
+What is the difference between dispose and finalize methods in c#?
+Difference between Equality Operator (==) and Equals() Method in C# : https://www.c-sharpcorner.com/UploadFile/3d39b4/difference-between-operator-and-equals-method-in-C-Sharp/
+How to use Nullable<> Types in .Net? https://www.c-sharpcorner.com/uploadfile/prasoonk/getting-started-with-nullable-types-in-C-Sharp/
+What is an Object Pool in .Net? 
+	https://www.c-sharpcorner.com/uploadfile/chinnasrihari/object-pool-design-pattern/
+	https://www.c-sharpcorner.com/article/object-pooling-in-net/
+
+
+
 	
 Articles :
 ==========
 http://www.yoda.arachsys.com/csharp/
+https://www.c-sharpcorner.com/UploadFile/8ef97c/C-Sharp-net-interview-questions-and-answers/
+https://www.c-sharpcorner.com/article/solid-single-responsibility-principle-with-c-sharp/
