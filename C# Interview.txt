@@ -12,11 +12,11 @@
 >> What is a Constructor ?
 	- It is a method that is called when an instance of a class is created to put that instance in an early state.
 	- It has same name as class & no return type.
-	- Using "this(...)" keyword we can pass execution or call multiple constructors on object instantiation.
+	- Using "this(...)" keyword we can pass execution or call multiple constructors on object instantiation. (Constructor Chaining)
 	
 >> What are type of Constructors ?	
 	- 2 Types :	1] Default Constructor / Parameterless Constructor
-				2] Paramererized Constructor
+			2] Paramererized Constructor
 
 >> Is Constructor overloading possible ?
 	- Constructor overloading is possible.
@@ -99,9 +99,10 @@
 	- To prevent the InvalidCastingException while downcasting we use "as" keyword.
 	- 
 	
->> Boxing & Unboxing
+>> Boxing & Unboxing / ValueType & Reference Type
 	- Value type to Reference type storing is Boxing.
 	- Reference type to Value type storing is Unboxing.
+	- https://www.c-sharpcorner.com/article/boxing-and-unboxing/
 	
 >> Method Overriding
 	- Changing the implementation of an inherited method.
@@ -120,7 +121,10 @@
 >> Sealed keyword
 	- It prevents overriding of a method if applied to a method.
 	- It prevents a class to be inherited if applied to a class.
-	
+
+>> What is the difference between a struct and a class in C#?
+	- https://www.c-sharpcorner.com/UploadFile/yougerthen/what-really-make-difference-between-structures-and-classes/	
+
 >> Interfaces and Testability
 	- It is a language construct similar to a class but it fundamentally different.
 	- Used to build loosely coupled architecture.
@@ -130,10 +134,27 @@
 		P20 Introduction Interfaces
 		P21 Interface Testability
 		P22 Interface Extensibility
-	
+
+>> What is extension method in c# and how to use them?
+	- Extension methods enable you to add methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. 
+	- An extension method is a special kind of static method, but they are called as if they were instance methods on the extended type.
+	- https://www.c-sharpcorner.com/uploadfile/puranindia/extension-methods-in-C-Sharp-3-0/
+
+>> What is IEnumerable<> in c#?
+	- IEnumerable is the parent interface for all non-generic collections in System.Collections namespace like ArrayList, HastTable.
+	- IEnumerable<T> is the parent interface for all generic collections in the System.Collections.Generic .
+	- The Generic version of the Interface has a GetEnumerator() method which returns the IEnumerator.
+	- IEnumerator allows to iterate through the collection by exposing a Current property and Move,Next and Reset methods, if we don't have this interface as a parent then we can’t use foreach loop or can’t use that class object in our LINQ query.
+
+
 >> Generics
 	- 
-	
+Additional Qns
+--------------
+What happens if the inherited interfaces have conflicting method names?
+What are the differences between IEnumerable and IQueryable?
+What is delegates in C# and uses of delegates?
+What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
 	
 Articles :
 ==========
