@@ -1,1 +1,8 @@
->> 
+>> What is Managed or Unmanaged Code?
+    - The Code that is developed under the .Net Framework and also executed with the help of CLR is called Managed code.
+    - Applications that do not run under the control of the CLR are said to be Unmanaged code.
+
+>> Stack vs. Heap: What's the difference?
+    - https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/
+    
+>>
