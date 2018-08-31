@@ -8,8 +8,7 @@
 	- Create request object
 		1] Fill Route Table with route collection inside 'global.asax' .
 		2] Fetch Route from "RouteData" object.
-		3] "RouteData” object is used to create the “RequestContext”
-object.
+		3] "RouteData” object is used to create the “RequestContext” object.
 		4] This request object is sent to “MvcHandler” instance to create the controller class instance.
 		5] The “ControllerActionInvoker” determines which action to executed and executes the action.
 		6] The action method executes and creates the type of result which can be a view result, file result, JSON result etc.
@@ -60,8 +59,10 @@ object.
 			return View(“DisplayCustomer”);
 		}
 		
->> What is routing ?
-	- Routing helps you to define a URL structure and map the URL with the controller routes.MapRoute() in RouteConfig Class and registered in global.asax
+>> What is Routing ?
+	- Routing helps you to define a URL structure and map the URL structure to the controller.
+	- routes.MapRoute() is used to map Routes in RouteConfig Class and registered in global.asax.
+	- https://goo.gl/TEU38s
 
 >> How can we navigate from one view to other view using hyperlink ?
 	- <%= Html.ActionLink("Home","Gotohome") %>
