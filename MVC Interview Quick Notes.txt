@@ -22,7 +22,7 @@
 			HTML.Display, HTML.DisplayFor, HTML.CheckBox, HTML.Dropdownlist, Html.ActionLink
 
 >> MVC Model Binders
-	- Model binder maps HTML form elements to the model.
+	- ModelBinder maps http requests from view data to the model. 
 		Example:
 		<form id="frm1" method=post action=”/Customer/SubmitCustomer”>
 			Customer code :- <input name="CCode" type="text" />
@@ -102,8 +102,6 @@
 	  [Range(10,25)]
 	  [Compare("Password")]
 	- One can get a particular error using "Errors" Collection.
-
->> 
 	
 >> Can we display all errors in one go ?
 	- <%= Html.ValidationSummary() %>
@@ -204,7 +202,7 @@
 	
 >> What is the difference between “ActionResult” and “ViewResult”?
 	- “ActionResult” is an abstract class while “ViewResult” derives from “ActionResult” class.
-	- “ActionResult” can be used to exploit polymorphism and dynamism.
+	- “ActionResult” can be used to exploit polymorphism and dynamism when returning reponse from Controller.
 	
 >> What is Attribute based routing ?
 [Route("Users/about")] over methods
@@ -227,6 +225,26 @@
 >> How to implement Ajax in MVC? & What kind of events can be tracked in AJAX ?
 	- https://www.c-sharpcorner.com/blogs/using-ajax-in-asp-net-mvc
 	- https://www.codeproject.com/Tips/886473/Implementing-AJAX-in-ASP-NET-MVC
+
+>> What are the filters in MVC ?
+	- Filters help us implement behaviours pre or post action execution.
+	- Types of Filters are :
+		1. Action Filters
+		2. Authorization Filters
+		3. Result Filters
+		4. Exception Filters
+		
+>> What are Action Filters ?
+	- Action filters are used to implement the logic that get executed before or after a controller action executes.
+	- Output Cache : This filter caches the output of action for certain duration.
+		a] [OutputCache(Duration=3600, VaryByParam="none", Location=OutputCacheLocation.Client, NoStore=true)]
+			+ The NoStore property is used to inform proxy servers and browser that they should not store a permanent copy of the cached content.
+	- Handle Error : It handles the error caused by action/controller, if any exception occurs it redirects the action to custom error page.
+		a] [HandleError(View = "Error", ExceptionType = typeof(DivideByZeroException), Order = 1, Master = "")]
+			+ Master property is set for Master View for displaying the exception.
+	- Authorize : It is used for filtering the authorized user to access the resource.
+		a] [Authorize(Users = "kamleshmj07@gmail.com")]
+		
 
 >> Can we create our custom view engine using MVC?
 	
