@@ -1,0 +1,22 @@
+1] What is Object Oreiented Programming ?
+2] OOPS Concept and Pillars with Example ?
+3] OOPS in current project ?
+4] Static Keyword and Helper Class.
+5] Use of Property. Property vs Normal declaration.
+6] Struct vs Class 
+7] Abstract Class
+8] MVC Model Binders
+9] New Features in MVC 5
+10] Partial Views
+11] Action Filters and Action Attributes
+12] Javascript Events and sequence of event firing.
+13] HTTPHandler and HTTPModules for MVC request.
+14] RESTful APIs
+15] System Variables in SQL Server
+16] Error Handling in SQL Server
+17] Transaction in SQL Server
+18] Pivot 
+19] Normalization
+20] Indexes in SQL Server
+21] Constraints in SQL Server, What is a Candidate Key ?
+22] What is ACID ?

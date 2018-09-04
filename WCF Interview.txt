@@ -8,14 +8,15 @@
 		1] Creating a service (WCF Library with Service Configuration)
 	 	2] Hosting a service (Website >> WCF Service >> SVC >> Codebehind)
 	 	3] Consuming a service (Add Service Reference i.e. Wsdl link)
-
 	
 >> Service Library (SL) vs Service Application (SA)
 	- SL contains Interfaces and Classes
 	- SA contains SL dll and is used for hosting with use of end points.
 	
 >> EndPoints
-	- Also called as ABCs of service.
+	- WCF Service is a program that exposes a collection of Endpoints. 
+	- Each Endpoint is a portal itself for communicating with the world.
+	- End point consists of three components.
 	- A : Address (192.168.10.10)
 	  B : Bindings (http, net.tcp, net.pipe, net.msmq)
 	  C : Contracts (Interfaces and methods)
@@ -54,6 +55,7 @@
 		P012 WCF Binding in Config
 		P013 WCF Binding in Coding
 		P014 WCF Other Important Binding Properties
+	- http://www.wcftutorial.net/EndPoint.aspx
 	
 >> Different Contracts in WCF
 	- [ServiceContract] : Applied on service interface. Describes the operations a service performs.
