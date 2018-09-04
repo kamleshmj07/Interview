@@ -20,3 +20,5 @@
 20] Indexes in SQL Server
 21] Constraints in SQL Server, What is a Candidate Key ?
 22] What is ACID ?
+23] Replication in SQL Server
+24] New Features in SQL 2015

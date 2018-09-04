@@ -1,0 +1,25 @@
+Infinite Computing Systems
+- .NET,C#,MVC and OOPS 
+
+Ingram Micro
+- .NET,C#,MVC and OOPS 
+- WCF
+- SSRS
+- MVC
+- SQL2008
+
+IIFL
+- What is the difference between Nvarchar and varchar ?  
+- How to delete duplicate rows form a table?  
+- Can we update a view ?
+- C# inheritance realted question
+- What is commit and rollback
+- Write a query to update a table ?
+- What is view ?
+- What is index ?
+- What are joins and normalization ?
+- Polymorphism
+- OOP concepts  
+
+
+https://www.dotnettricks.com/learn/sqlserver/sql-server-exception-handling-by-try-catch

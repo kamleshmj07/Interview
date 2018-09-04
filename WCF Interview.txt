@@ -64,5 +64,18 @@
 	- [FaultContract] : Describes errors raised by the service and how the errors will be handled and propogated to the clients.
 	- Message Contracts : Passing message for passing specific formats.
 	
+	
+Additional Qns
+--------------	
 
+
+
+
+
+
+
+
+
+Articles :
+==========
 http://www.wcftutorial.net/
