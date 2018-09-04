@@ -6,6 +6,13 @@
 >> What is a object ?
 	- Instance of a class that resides in a memory.
 
+>> What are the methods a class inherits from Object ?
+	- Object itself just defines four methods, that are :
+		1] ToString, which is a very comfortable way of defining how an instance of the type should presented as a string.
+		2] Equals, which is a generic way of comparing two arbitrary objects of equality.
+		3] GetHashCode, which gets a numeric indicator if two objects could be equal.
+		4] GetType, which gets the meta-information on the specific type of the current instance.
+	
 >> What are different types of class members ?
 	- There are 2 types of class members : Instance members and Static members.
 
@@ -16,7 +23,7 @@
 	
 >> What are type of Constructors ?	
 	- 2 Types :	1] Default Constructor / Parameterless Constructor
-			2] Paramererized Constructor
+				2] Paramererized Constructor
 
 >> Is Constructor overloading possible ?
 	- Constructor overloading is possible.
@@ -24,6 +31,12 @@
 >> Object Initializers
 	- Syntax/Way to set early state of an object without having a constructor.
 	
+>> Access Modifiers	
+	- For types directly placed in a namespace, the default modifier is internal.
+	- For types and members placed in a type (like a class or structure), the default modifier is private.
+	- In C# nothing is public unless stated so
+	
+
 >> Params modifier
 	- Used to pass multiple parameters to a method.
 	

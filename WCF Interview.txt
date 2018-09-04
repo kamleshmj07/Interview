@@ -1,9 +1,9 @@
 >> Windows Communication Foundation	
 	- WCF is a unification technology which unites the following technologies:
-		1]NET remoting
-		2]MSMQ
-		3]Web services
-		4]COM+
+		1] NET remoting
+		2] MSMQ
+		3] Web services
+		4] COM+
 	- WCF we need to 
 		1] Creating a service (WCF Library with Service Configuration)
 	 	2] Hosting a service (Website >> WCF Service >> SVC >> Codebehind)
@@ -63,3 +63,4 @@
 	- Message Contracts : Passing message for passing specific formats.
 	
 
+http://www.wcftutorial.net/
