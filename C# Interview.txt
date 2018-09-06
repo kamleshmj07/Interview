@@ -162,7 +162,26 @@
 
 
 >> Generics
-	- 
+	- Generics are type safe containers which help us to use a same blue print across different types when it comes to collections/dynamicity.
+	- Generics provide better performance because they do not result in boxing or unboxing penalties when storing value types.
+	- Generics are type safe because they can contain only the type of type you specify.
+	- Generics greatly reduce the need to build custom collection types because you specify the “type of type” when creating the generic container.
+	- <T> is a token which is called as "Type Parameter" or "PlaceHolders"
+	
+	
+	
+
+>> 
+
+
+
+
+
+
+
+
+	
+	
 Additional Qns
 --------------
 What happens if the inherited interfaces have conflicting method names?
