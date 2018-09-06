@@ -1,3 +1,18 @@
+>> Key Benefits of .Net Programming
+    - Interoperability with Old COM and new Apps built using the .Net framework.
+    - Multiple language support like C#, F#, Visual Basic, etc.
+    - Common Engine to compile all the .Net aware languages.
+    - Cross language integration.
+    
+>> What is CLR ?
+    - CLR is a runtime environment which compliles the code in the MSIL and then further transalates to byte code.
+    - CLR also takes care of the number of other things like memory management, security checks, co-ordinating threads and application hosting.
+    
+>> What is CLS and CTS ?
+    - The CTS specification fully describes all possible data types and all programming constructs supported by the runtime,
+      specifies how these entities can interact with each other.
+    - The CLS, is a related specification that defines a subset of common types and programming constructs that all .NET programming languages can agree on.
+
 >> What is Managed or Unmanaged Code?
     - The Code that is developed under the .Net Framework and also executed with the help of CLR is called Managed code.
     - Applications that do not run under the control of the CLR are said to be Unmanaged code.
@@ -5,4 +20,3 @@
 >> Stack vs. Heap: What's the difference?
     - https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/
     
->>
