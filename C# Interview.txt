@@ -162,7 +162,7 @@
 
 
 >> Generics
-	- Generics are type safe containers which help us to use a same blue print across different types when it comes to collections/dynamicity.
+	- Generics are type safe containers which help us to use the same logic across different types when it comes to collections/dynamicity.
 	- Generics provide better performance because they do not result in boxing or unboxing penalties when storing value types.
 	- Generics are type safe because they can contain only the type of type you specify.
 	- Generics greatly reduce the need to build custom collection types because you specify the “type of type” when creating the generic container.
@@ -170,9 +170,18 @@
 	- Non Generic Class or other Type can have Generic members.
 	- Note: Only classes, structures, interfaces, and delegates can be written generically; enum types cannot.
 	
+	- Constraints :
 	
-	
-
+		where T : struct The type parameter <T> must have System.ValueType in its chain of inheritance.
+		where T : class The type parameter <T> must not have System.ValueType in its chain of inheritance.
+		where T : new() The type parameter <T> must have a default constructor. 
+			  This is helpful if your generic type must create an instance of the type parameter 
+			  because you cannot assume you know the format of custom constructors. 
+			  Note that this constraint must be listed last on a multiconstrained type.
+		where T : NameOfBaseClass The type parameter <T> must be derived from the class specified by NameOfBaseClass. 
+		where T : NameOfInterface The type parameter <T> must implement the interface specified by NameOfInterface.
+			  You can separate multiple interfaces as a commadelimited list.
+			  
 >> Collections
 	- Two Types of Collections : 
 		a] Non-Generic
