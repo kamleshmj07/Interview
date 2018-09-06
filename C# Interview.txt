@@ -20,10 +20,19 @@
 	- It is a method that is called when an instance of a class is created to put that instance in an early state.
 	- It has same name as class & no return type.
 	- Using "this(...)" keyword we can pass execution or call multiple constructors on object instantiation. (Constructor Chaining)
+	- If you are targeting .NET 4.0 and higher, you can further simplify your programming tasks by making use of optional arguments
+	  as an alternative to traditional constructor chaining.
 	
 >> What are type of Constructors ?	
 	- 2 Types :	1] Default Constructor / Parameterless Constructor
-				2] Paramererized Constructor
+			2] Paramererized Constructor
+
+>> Static Constructor
+	- A given class may define only a single static constructor i.e. The static constructor cannot be overloaded.
+	- A static constructor does not take an access modifier and cannot take any parameters.
+	- A static constructor executes exactly one time, regardless of how many objects of the type are created.
+	- The runtime invokes the static constructor when it creates an instance of the class or before accessing the first static member invoked by the caller.
+	- The static constructor executes before any instance-level constructors.
 
 >> Is Constructor overloading possible ?
 	- Constructor overloading is possible.
