@@ -91,7 +91,8 @@ Additional Qns
 Instance Modes in WCF ?
 Transaction Propogation in WCF ?
 Concurency in WCF ?
-
+IModelBinder is present in 2 different namespace, Why ?
+IModelBinderProvider ?
 
 
 
