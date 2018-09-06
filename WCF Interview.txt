@@ -63,8 +63,29 @@
 	- [DataContract] : Used on the complex type for passing/receiving the same complex type to/from the OperationContract.
 	- [FaultContract] : Describes errors raised by the service and how the errors will be handled and propogated to the clients.
 	- Message Contracts : Passing message for passing specific formats.
+
+>> Message Contracts
+	- WCF uses SOAP message for communication. In SOAP, WCF allows to customize the message header & define the security for header and body of the message.
+	- If a type has both Message and Data contract, service operation will accept only message contract.
+	- Rules :
+		a] When using Message contract type as parameter, Only one parameter can be used in service Operation
+				[OperationContract]
+				void SaveEmployeeDetails(EmployeeDetails emp);
+		
+		b] Service operation either should return Messagecontract type or it should not return any value
+				[OperationContract]
+				EmployeeDetails GetEmployeeDetails();
+		
+		c] Service operation will accept and return only message contract type. Other data types are not allowed.
+				[OperationContract]
+				EmployeeDetails ModifyEmployeeDetails(EmployeeDetails emp);
+	- MessageHeaderArray Attribute : http://wcftutorial.net/MessageHeaderArray-Attribute.aspx
 	
-	
+>> FaultContract
+
+
+
+
 Additional Qns
 --------------	
 Instance Modes in WCF ?
