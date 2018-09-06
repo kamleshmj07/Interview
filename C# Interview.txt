@@ -167,11 +167,46 @@
 	- Generics are type safe because they can contain only the type of type you specify.
 	- Generics greatly reduce the need to build custom collection types because you specify the “type of type” when creating the generic container.
 	- <T> is a token which is called as "Type Parameter" or "PlaceHolders"
+	- Non Generic Class or other Type can have Generic members.
+	- Note: Only classes, structures, interfaces, and delegates can be written generically; enum types cannot.
 	
 	
 	
 
->> 
+>> Collections
+	- Two Types of Collections : 
+		a] Non-Generic
+		b] Generic
+	- Generic Collections :
+		+ Following are the different Generic Interfaces in the namespace : System.Collections.Generic
+			ICollection<T> Defines features (e.g., size, enumeration, & thread safety) for all generic collection types.
+			IComparer<T> Defines a way to compare to objects.
+			IDictionary<TKey, TValue> Allows a generic collection object to represent its contents using key/value pairs.
+			IEnumerable<T> Returns the IEnumerator<T> interface for a given object.
+			IEnumerator<T> Enables foreach-style iteration over a generic collection.
+			IList<T> Provides behavior to add, remove, and index items in a sequential list of objects.
+			ISet<T> Provides the base interface for the abstraction of sets.
+		+ Dictionary<TKey, TValue>
+		  ICollection<T>,IDictionary<TKey, TValue>,IEnumerable<T>
+		  Represents a generic collection of keys and values.
+		+ LinkedList<T>
+		  ICollection<T>, IEnumerable<T>
+		  This represents a doubly linked list
+		+ List<T>
+		  ICollection<T>, IEnumerable<T>, IList<T>
+		  This is a dynamically resizable sequential list of items.
+		+ Queue<T>
+		  ICollection, IEnumerable<T>
+		  This is a generic implementation of a first-in, first-out (FIFO) list.
+		+ SortedDictionary<TKey, TValue>
+		  ICollection<T>, IDictionary<TKey, TValue>, IEnumerable<T>
+		  This is a generic implementation of a sorted set of key/value pairs.
+		+ SortedSet<T>
+		  ICollection<T>, IEnumerable<T>, ISet<T>
+  		  This represents a collection of objects that is maintained in sorted order with no duplication.
+		+ Stack<T> 
+		  ICollection, IEnumerable<T>
+		  This is a generic implementation of a last-in, first-out (LIFO) list. 
 
 
 
@@ -195,7 +230,7 @@ How to use Nullable<> Types in .Net? https://www.c-sharpcorner.com/uploadfile/pr
 What is an Object Pool in .Net? 
 	https://www.c-sharpcorner.com/uploadfile/chinnasrihari/object-pool-design-pattern/
 	https://www.c-sharpcorner.com/article/object-pooling-in-net/
-
+Working with ObservableCollection<T>
 
 
 	
