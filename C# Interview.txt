@@ -25,7 +25,7 @@
 	
 >> What are type of Constructors ?	
 	- 2 Types :	1] Default Constructor / Parameterless Constructor
-			2] Paramererized Constructor
+				2] Paramererized Constructor
 
 >> Static Constructor
 	- A given class may define only a single static constructor i.e. The static constructor cannot be overloaded.
@@ -33,6 +33,7 @@
 	- A static constructor executes exactly one time, regardless of how many objects of the type are created.
 	- The runtime invokes the static constructor when it creates an instance of the class or before accessing the first static member invoked by the caller.
 	- The static constructor executes before any instance-level constructors.
+	- https://www.codeproject.com/Tips/1157683/Csharp-Inheritance-Interview-Point-of-View
 
 >> Is Constructor overloading possible ?
 	- Constructor overloading is possible.
@@ -92,6 +93,7 @@
 >> Inheritance
 	- Is-A relationship is inheritance.
 	- Benefits : Code reuse and Polymorphic behaviour.
+	- https://www.c-sharpcorner.com/UploadFile/e06010/playing-with-inheritance-in-C-Sharp-net/
 	
 >> Composition
 	- Has-A relationship is composition.
