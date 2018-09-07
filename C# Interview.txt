@@ -170,6 +170,20 @@
 	- The Generic version of the Interface has a GetEnumerator() method which returns the IEnumerator.
 	- IEnumerator allows to iterate through the collection by exposing a Current property and Move,Next and Reset methods, if we don't have this interface as a parent then we can’t use foreach loop or can’t use that class object in our LINQ query.
 
+>> Exceptions 
+	- To create a Custom Exception, we need to derive from Exception/ApplicationException.
+	  Mark the custom exception class with the [System.Serializable] attribute.
+	  This class should define a default constructor.
+	  Also, Defines a constructor that sets the inherited Message property.
+	  Defines a constructor to handle “inner exceptions”.
+	  Defines a constructor to handle the serialization of your type.
+	- General catch Statements : We can process the catch block without catching any exceptions and throwing any exceptions. Just pure Catch block.
+	- Rethrowing Exceptions : We can catch an exception and rethrow just by using the keyword "throw"
+
+	  
+>> Processing Multiple Exceptions 
+	- The rule of thumb to keep in mind is to make sure your catch blocks are structured such that the very first catch is the most specific exception (i.e., the most derived type in an exception-type inheritance chain), leaving the final catch for the most general (i.e., the base class of a given exception inheritance chain, in this case System.Exception).
+
 
 
 >> Generics
