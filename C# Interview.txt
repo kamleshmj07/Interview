@@ -52,9 +52,13 @@
 	
 >> Ref modifier
 	- To pass a value type as a reference we use the Ref modifier.
+	- If a reference type is passed by reference, the callee may change the values of the object's state data, as well as the object it is referencing.
+	- If a reference type is passed by value, the callee may change the values of the object's state data, but not the object it is referencing.
 	
 >> Out modifier
 	- To return a value to the caller we use Out modifier, we can get multiple values using this modifier.
+	- A method that defines output parameters must assign the parameter to a valid value before exiting the method scope.
+	- If not done so, gives compile time error.
 	
 >> Readonly modifier
 	- Initialize a field only once. Can be initialized in a constructor.
@@ -114,8 +118,9 @@
 >> Upcasting & Downcasting (Watch .Net/C#/Class Interfaces OOP with Mosh P15)
 	- Conversion of a derived class to base class is UPCASTING.
 		Base obj = Child obj;
-		Example : 	StreamReader takes Stream obj.
-					ArrayList takes Object obj.
+		Example :
+			StreamReader takes Stream obj.
+			ArrayList takes Object obj.
 	- Conversion from a base class to derived class is DOWNCASTING.
 		Child obj = (Child)Base obj
 		
@@ -132,7 +137,6 @@
 	- Changing the implementation of an inherited method.
 	- Default Implementation : Virtual keyword
 	  New Implementation : Override keyword
-	- 
 	
 >> Abstract Classes 
 	- No implementation for abstract member.
@@ -162,6 +166,7 @@
 >> What is extension method in c# and how to use them?
 	- Extension methods enable you to add methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. 
 	- An extension method is a special kind of static method, but they are called as if they were instance methods on the extended type.
+	- Extending Types Implementing Specific Interfaces :  It is also possible to define an extension method that can only extend a class or structure that implements the correct interface.
 	- https://www.c-sharpcorner.com/uploadfile/puranindia/extension-methods-in-C-Sharp-3-0/
 
 >> What is IEnumerable<> in c#?
@@ -264,7 +269,9 @@ How to use Nullable<> Types in .Net? https://www.c-sharpcorner.com/uploadfile/pr
 What is an Object Pool in .Net? 
 	https://www.c-sharpcorner.com/uploadfile/chinnasrihari/object-pool-design-pattern/
 	https://www.c-sharpcorner.com/article/object-pooling-in-net/
-Working with ObservableCollection<T>
+Working with ObservableCollection<T>.
+Overloading Indexer Methods.
+Anonymous Type.
 
 
 	
