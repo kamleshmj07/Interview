@@ -57,6 +57,33 @@
 		P014 WCF Other Important Binding Properties
 	- http://www.wcftutorial.net/EndPoint.aspx
 	
+>> Types of Bindings : 
+	1] BasicHttpBinding
+		+ This binding uses HTTP as the transport and text/XML as the default message encoding.
+		+ Security is disabled by default.
+		+ This binding does not support WS-* functionalities like WS- Addressing, WS-Security, WS-ReliableMessaging
+	2] WSHttpBinding
+		+ Defines a secure, reliable, interoperable binding suitable for non-duplex service contracts.
+		+ It supports WS-* functionality and distributed transactions with reliable and secure sessions using SOAP security.
+		+ It uses HTTP and HTTPS transport for communication.
+		+ Reliable sessions are disabled by default.
+	3] WSDualHttpBinding
+		+ This binding is same as that of WSHttpBinding, except it supports duplex service. Duplex service is a service which uses duplex message pattern, which allows service to communicate with client via callback.
+		+ In WSDualHttpBinding reliable sessions are enabled by default. It also supports communication via SOAP intermediaries.
+		
+		
+>> WS-* is shorthand for the the myriad of specifications that are used for web service messaging.
+	Some of the services are:
+
+	WS-Security
+	WS-SecureConversation
+	WS-Federation
+	WS-Authorization
+	WS-Policy
+	WS-Trust
+	WS-Privacy
+	WS-Test
+		
 >> Different Contracts in WCF
 	- [ServiceContract] : Applied on service interface. Describes the operations a service performs.
 	- [OperationContract] : Applied on the service method. Describes the operations a service performs.
@@ -83,12 +110,37 @@
 	
 >> FaultContract
 
-
+>> Instance Management
+	- Basically there are three instance modes in WCF:
+		1] Per-Call instance mode
+			+ When WCF service is configured for Per-Call instance mode, 
+			  Service instance will be created for each client request. 
+			  This Service instance will be disposed after response is sent back to client. 
+			+ http://www.wcftutorial.net/Per-Call-Service.aspx
+		2] Per-Session instance mode
+			+ When client creates new proxy to particular service instance, 
+			  a dedicated service instance will be provided to the client.
+		3] Singleton Instance Mode
+			+ All clients are independently connected to the same single instance.
+	- Instance mode can be configured using ServiceBehavior attribute.
+		[ServiceBehavior(InstanceContextMode=InstanceContextMode.Single)]
+		
+>> Instance Deactivation in WCF
+	- The service instance is basically hosted in a context.
+	- Session actually correlated the client message not to the instance of the service, but session is related to the context of the service host.
+	- On the session starts, the host creates a new context and when session ends, the context is terminated.
+	- By default, the lifetime of the context is the same as that of the instance it hosts.
+	- For optimization purposes, WCF provides the option of separating the two lifetimes and deactivating the instance separately from its context.
+	- RealeaseInstanceMode.None
+	  RealeaseInstanceMode.BeforeCall
+	  RealeaseInstanceMode.AfterCall
+	  RealeaseInstanceMode.BeforeAndAfterCall
+	  
+>> 
 
 
 Additional Qns
 --------------	
-Instance Modes in WCF ?
 Transaction Propogation in WCF ?
 Concurency in WCF ?
 IModelBinder is present in 2 different namespace, Why ?
