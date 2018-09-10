@@ -16,7 +16,16 @@
 >> What is Managed or Unmanaged Code?
     - The Code that is developed under the .Net Framework and also executed with the help of CLR is called Managed code.
     - Applications that do not run under the control of the CLR are said to be Unmanaged code.
+    
+>> Can we suppress the Garbage collector? If yes, then why ?
+    - We can suppress the Garbage Collector. There is the Static method in GC class called as SupressFinalize.
+        GC.SuppressFinalize(objectName);
+    - This Static method takes a parameter for the object. So we can pass it to suppress the claiming memory for this object.
 
+>> Can we call the Finalize() method to be executed explicitly ?
+    - No, the Finalize() method can't be called as Explicitly. 
+    - The Garbage collector calls it when the Heap memory is having no space to allocate the new object in the heap.
+    
 >> Stack vs. Heap: What's the difference?
     - https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/
     
