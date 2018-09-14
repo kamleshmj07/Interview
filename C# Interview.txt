@@ -248,12 +248,43 @@
 		  This is a generic implementation of a last-in, first-out (LIFO) list. 
 
 
+>> Delegates 
+	- Delegate is a type safe object that points to a method or possibly a list of methods in a application.
+	- Every delegate is automatically endowed with the ability to call its methods synchronously or asynchronously.
+	- When the C# compiler processes delegate types, it automatically generates a sealed class deriving
+from System.MulticastDelegate
+	- For following code :
+		1] Notice that the parameters and return type defined for the Invoke() method exactly match the definition of the delegate.
+		2] The initial parameters to BeginInvoke() members (two integers, in our case) are also based on the BinaryOp delegate; 		   however, BeginInvoke() will always provide two final parameters (of type AsyncCallback and object) 
+		   that are used to facilitate asynchronous method invocations. 
+	
+	
+		// This is only pseudo-code!
+		public sealed class DelegateName : System.MulticastDelegate
+		{
+		 public delegateReturnValue Invoke(allDelegateInputRefAndOutParams);
 
+		 public IAsyncResult BeginInvoke(allDelegateInputRefAndOutParams, AsyncCallback cb, object state);
 
+		 public delegateReturnValue EndInvoke(allDelegateRefAndOutParams, IAsyncResult result);
+		} 
 
+	- The Generic Delegate :
+		public delegate void MyGenericDelegate<T>(T arg);
+		1] Action<> delegate
+			+ The generic Action<> delegate is defined in the System namespaces of mscorlib.dll and System.Core.dll assemblies.
+			+ You can use this generic delegate to "point to" a method that takes up to 16 arguments (that ought to be enough!) and returns void
+		2] Func<> delegate
+			+ The generic Func<> delegate can point to methods that (like Action<>) take up to 16 parameters and
+a custom return value.
 
-
-
+>> The Event Keyword
+	- We don't have to use the custom methods to add/remove methods to a delegate's invocation list when we use Event keyword.
+	- Defining Event is a two step process, we have to define a delegate type that will hold the list of methods when an event is fired. Next you declare an Event in terms of related delegate type.
+		public delegate void CarEngineHandler(string msg);
+		// This car can send these events.
+		public event CarEngineHandler Exploded;
+		public event CarEngineHandler AboutToBlow; 
 	
 	
 Additional Qns
