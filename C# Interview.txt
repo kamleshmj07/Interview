@@ -24,8 +24,9 @@
 	  as an alternative to traditional constructor chaining.
 	
 >> What are type of Constructors ?	
-	- 2 Types :	1] Default Constructor / Parameterless Constructor
-				2] Paramererized Constructor
+	- 2 Types :	
+		1] Default Constructor / Parameterless Constructor
+		2] Paramererized Constructor
 
 >> Static Constructor
 	- A given class may define only a single static constructor i.e. The static constructor cannot be overloaded.
@@ -46,19 +47,19 @@
 	- For types and members placed in a type (like a class or structure), the default modifier is private.
 	- In C# nothing is public unless stated so
 	
-
->> Params modifier
+>> params modifier
 	- Used to pass multiple parameters to a method.
+	- Example : static double CalculateAverage(params double[] values) // CalculateAverage(4.0, 3.2, 5.7, 64.22, 87.2);
 	
->> Ref modifier
-	- To pass a value type as a reference we use the Ref modifier.
+>> ref modifier
+	- To pass a value type as a reference we use the ref modifier.
 	- If a reference type is passed by reference, the callee may change the values of the object's state data, as well as the object it is referencing.
 	- If a reference type is passed by value, the callee may change the values of the object's state data, but not the object it is referencing.
 	
->> Out modifier
-	- To return a value to the caller we use Out modifier, we can get multiple values using this modifier.
-	- A method that defines output parameters must assign the parameter to a valid value before exiting the method scope.
-	- If not done so, gives compile time error.
+>> out modifier
+	- To return a value to the caller we use out modifier, we can get multiple values using this modifier.
+	- A method that defines out parameter must assign the parameter to a valid value before exiting the method scope else gives compile time error.
+	- The out parameter need not be initialized before passing to method.
 	
 >> Readonly modifier
 	- Initialize a field only once. Can be initialized in a constructor.
@@ -69,6 +70,9 @@
 	- Static internally.
 	- https://stackoverflow.com/questions/55984/what-is-the-difference-between-const-and-readonly
 	- https://www.codeproject.com/Tips/803656/Practical-Difference-between-Const-ReadOnly
+
+>> The Checked Keyword
+	- It is used to handle overflow or underflow conditions in your application.
 	
 >> Access Modifiers
 	- Type :	1] Public
@@ -303,7 +307,17 @@ What is an Object Pool in .Net?
 Working with ObservableCollection<T>.
 Overloading Indexer Methods.
 Anonymous Type.
+Controlling the Underlying Storage for an enum
+Named Parameters & Optional Parameters
 
+>> Can we suppress the Garbage collector? If yes, then why ?
+    - We can suppress the Garbage Collector. There is the Static method in GC class called as SupressFinalize.
+        GC.SuppressFinalize(objectName);
+    - This Static method takes a parameter for the object. So we can pass it to suppress the claiming memory for this object.
+
+>> Can we call the Finalize() method to be executed explicitly ?
+    - No, the Finalize() method can't be called as Explicitly. 
+    - The Garbage collector calls it when the Heap memory is having no space to allocate the new object in the heap.
 
 	
 Articles :
