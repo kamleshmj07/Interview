@@ -1,3 +1,9 @@
+>> Why was .Net Framework introduced ?
+    - Earlier the numerous features and libraries were built using Component Object Model (i.e. COM) architecture.
+    - These were interoperable i.e. C++ written COM library can be accessed by Visual Basic.
+    - However, the COM was plagued by complicated infrastructure and a fragile deployment model. Also limited to Windows OS.
+    - In 2002 C# & .Net was introduced to overcome all the above drwabacks in COM feature builder.
+    
 >> Key Benefits of .Net Programming
     - Interoperability with Old COM and new Apps built using the .Net framework.
     - Multiple language support like C#, F#, Visual Basic, etc.
@@ -5,26 +11,24 @@
     - Cross language integration.
     
 >> What is CLR ?
-    - CLR is a runtime environment which compliles the code in the MSIL and then further transalates to byte code.
+    - The runtime layer is properly referred to as the Common Language Runtime, or CLR. 
+    - The primary role of the CLR is to locate, load, and manage .NET objects on your behalf.
     - CLR also takes care of the number of other things like memory management, security checks, co-ordinating threads and application hosting.
     
 >> What is CLS and CTS ?
-    - The CTS specification fully describes all possible data types and all programming constructs supported by the runtime,
+    - The CTS specification fully describes all possible data types and all programming constructs supported by the runtime, and 
       specifies how these entities can interact with each other.
     - The CLS, is a related specification that defines a subset of common types and programming constructs that all .NET programming languages can agree on.
 
 >> What is Managed or Unmanaged Code?
     - The Code that is developed under the .Net Framework and also executed with the help of CLR is called Managed code.
     - Applications that do not run under the control of the CLR are said to be Unmanaged code.
-    
->> Can we suppress the Garbage collector? If yes, then why ?
-    - We can suppress the Garbage Collector. There is the Static method in GC class called as SupressFinalize.
-        GC.SuppressFinalize(objectName);
-    - This Static method takes a parameter for the object. So we can pass it to suppress the claiming memory for this object.
 
->> Can we call the Finalize() method to be executed explicitly ?
-    - No, the Finalize() method can't be called as Explicitly. 
-    - The Garbage collector calls it when the Heap memory is having no space to allocate the new object in the heap.
+>> What is a JIT ?
+    - JIT compiler is a part of the runtime execution environment that helps in a higher performance by placing the complied code in the cache for a faster execution.
+    - Pre-JIT : When an application is being deployed, the Pre-JIT complier compiles the complete source code into a local code in a single compilation cycle.
+      Econo-JIT : Econo-JIT compiles only those methods that are called at runtime. However, these compiled methods are removed when they are not required.
+      Normal-JIT : Normal-JIT compiles only those methods that are called at runtime and stores in the cache. This increases speed because subsequent calls to these methods are executed from cache.
     
 >> Stack vs. Heap: What's the difference?
     - https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/
