@@ -1,10 +1,25 @@
+>> Defining Pillars of OOPS
+	1] Encapsulation: How does this language hide an object’s internal implementation details and preserve data integrity?
+		+ Method encapsulations, Use of access modifiers.
+	2] Inheritance: How does this language promote code reuse?
+		+ Extend behavior of base type, Aggregation or "has-a" relationship.
+	3] Polymorphism: How does this language let you treat related objects in a similar way? 
+
+>> What is a struct ?
+	- User defined data type, which can have any number of data fields and data members.
+	- Struct can be initialized with or without "new" keyword.
+		1] Without "new" keyword : All data fields should be initialized, else throws compile-time error.
+		2] With "new" keyword : Uses default constructor and sets data fields to default values.
+	- Struct can have a custom constructor but with all the values.
+	- Can implement Interfaces.
+
 >> What is a class ?
 	- Class is a building block of an application.
 	- It is a user defined data type with data fields and data members.
 	- Ideally a class should follow Single Responsibility Principle (SRP).
 
 >> What is a object ?
-	- Instance of a class that resides in a memory.
+	- Instance of a class that resides on a managed heap memory.
 
 >> What are the methods a class inherits from Object ?
 	- Object itself just defines four methods, that are :
@@ -22,7 +37,10 @@
 	- Using "this(...)" keyword we can pass execution or call multiple constructors on object instantiation. (Constructor Chaining)
 	- If you are targeting .NET 4.0 and higher, you can further simplify your programming tasks by making use of optional arguments
 	  as an alternative to traditional constructor chaining.
-	
+
+>> Is Constructor overloading possible ?
+	- Constructor overloading is possible.
+	  
 >> What are type of Constructors ?	
 	- 2 Types :	
 		1] Default Constructor / Parameterless Constructor
@@ -34,13 +52,21 @@
 	- A static constructor executes exactly one time, regardless of how many objects of the type are created.
 	- The runtime invokes the static constructor when it creates an instance of the class or before accessing the first static member invoked by the caller.
 	- The static constructor executes before any instance-level constructors.
-	- https://www.codeproject.com/Tips/1157683/Csharp-Inheritance-Interview-Point-of-View
-
->> Is Constructor overloading possible ?
-	- Constructor overloading is possible.
+	- IMP : https://www.codeproject.com/Tips/1157683/Csharp-Inheritance-Interview-Point-of-View
 	
 >> Object Initializers
 	- Syntax/Way to set early state of an object without having a constructor.
+
+>> What are Nullable types ?
+	- A nullable type can represent all the values of its underlying type, plus the value "null".
+	- It is helpful when working with the relational databases.
+	- The "?" suffix notation is a shorthand for creating an instance of the generic System.Nullable<T> structure type.
+		1] This has HasValue property or the != operator
+		2] The assigned value can be obtained using Value property.
+	- "??" operator
+		// GetIntFromDatabase() returns nullable int.
+		// If the value from GetIntFromDatabase() is null, then	assign local variable to 100.
+		int myData = dr.GetIntFromDatabase() ?? 100;
 	
 >> Access Modifiers	
 	- For types directly placed in a namespace, the default modifier is internal.
@@ -61,11 +87,11 @@
 	- A method that defines out parameter must assign the parameter to a valid value before exiting the method scope else gives compile time error.
 	- The out parameter need not be initialized before passing to method.
 	
->> Readonly modifier
+>> readonly modifier
 	- Initialize a field only once. Can be initialized in a constructor.
-	- 
+	- Static readonly field can be initialized in a static constructor.
 	
->> Const modifier
+>> const keyword
 	- Initialize when you declare. It is called compile-time constant.
 	- Static internally.
 	- https://stackoverflow.com/questions/55984/what-is-the-difference-between-const-and-readonly
@@ -74,7 +100,7 @@
 >> The Checked Keyword
 	- It is used to handle overflow or underflow conditions in your application.
 	
->> Access Modifiers
+>> Access Modifi	ers
 	- Type :	1] Public
 				2] Private
 				3] Protected
