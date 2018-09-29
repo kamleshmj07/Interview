@@ -12,6 +12,7 @@
 		2] With "new" keyword : Uses default constructor and sets data fields to default values.
 	- Struct can have a custom constructor but with all the values.
 	- Can implement Interfaces.
+	- Are implicitly Sealed.
 
 >> What is a class ?
 	- Class is a building block of an application.
@@ -100,7 +101,7 @@
 >> The Checked Keyword
 	- It is used to handle overflow or underflow conditions in your application.
 	
->> Access Modifi	ers
+>> Access Modifiers
 	- Type :	1] Public
 				2] Private
 				3] Protected
@@ -119,7 +120,7 @@
 			get {...}
 			set {...}
 		}
-	- Example : HttpCookie 
+	- Example : HttpCookie
 	
 >> Coupling
 	- Understand Encapsulation, Relationships between classes and Interfaces to implement loosely coupled architecture.
@@ -204,7 +205,25 @@
 	- IEnumerable<T> is the parent interface for all generic collections in the System.Collections.Generic .
 	- The Generic version of the Interface has a GetEnumerator() method which returns the IEnumerator.
 	- IEnumerator allows to iterate through the collection by exposing a Current property and Move,Next and Reset methods, if we don't have this interface as a parent then we can’t use foreach loop or can’t use that class object in our LINQ query.
+	
+>> The ICloneable interface
+	- Gives your custom type the ability to return an identical copy of itself to the caller.
+		public interface ICloneable
+		{
+			object Clone();
+		} 
+	- The implementation should be able to copy the values of your member variables into a new object instance of the same type, and return it to the user.
 
+>> The IComparable interface
+	- It specifies a behavior which allows the object to be sorted based on some specific key.	
+		public interface IComparable
+		{
+			int CompareTo(object o);
+		}
+		
+		Array.Sort(customTypes);
+
+		
 >> Exceptions 
 	- To create a Custom Exception, we need to derive from Exception/ApplicationException.
 	  Mark the custom exception class with the [System.Serializable] attribute.
@@ -335,6 +354,8 @@ Overloading Indexer Methods.
 Anonymous Type.
 Controlling the Underlying Storage for an enum
 Named Parameters & Optional Parameters
+Yield keyword 
+Building a Named Iterator
 
 >> Can we suppress the Garbage collector? If yes, then why ?
     - We can suppress the Garbage Collector. There is the Static method in GC class called as SupressFinalize.
