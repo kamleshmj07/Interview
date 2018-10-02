@@ -1,4 +1,7 @@
 >> Windows Communication Foundation	
+	- WCF is a SDK for developing and deploying services.
+	- WCF is MS's implementation of set of industry standards defining interoperable service interactions, type conversions, marshaling and protocol management. 
+	- WCF client may interoperate with Non WCF services and vice versa.
 	- WCF is a unification technology which unites the following technologies:
 		1] NET remoting
 		2] MSMQ
@@ -8,6 +11,55 @@
 		1] Creating a service (WCF Library with Service Configuration)
 	 	2] Hosting a service (Website >> WCF Service >> SVC >> Codebehind)
 	 	3] Consuming a service (Add Service Reference i.e. Wsdl link)
+	
+>> Services Introduction
+	- A Service is a unit of functionality exposed to the world.
+	- A Service Oriented Application aggregates service into a single logical application, similar to the way a Component oriented application aggregates components and Object oriented application aggregates objects.
+	
+>> Messages Introduction
+	- Client and service interact by sending recieving messages.
+	- Messages tranferred from client to service directly or via intermediaries like Azure Service Bus.
+	- WCF uses SOAP messages, independent of transport protocol.
+
+>> Addresses Introduction
+	- In WCF, every service is associated with unique address.
+	- Address provides 2 important elements : Location and Transport protocol.
+	- Basic format : [transport]://[machine or domain][:optional port]/[optional URI]
+	- Out of the box WCF provides following transport protocols :
+		HTTP/HTTPS : http://localhost:80/MyService or https://localhost:443/MyService , 2 HTTP adresses can share a same port even from same machine.
+		TCP	: net.tcp://localhost:808/MyService , 2 TCP adresses can share a same port.
+		IPC
+		MSMQ
+		Service Bus
+		WebSocket
+		UDP
+	
+>> Contracts Introduction
+	- The contract is a platform-neutral and standard way of describing what the service does.
+		1] Service Contracts
+			ServiceContract attribute exposes a CLR interface/class as a WCF contract, ready to be consumed.
+			Similarly, none of the members of the type implementing ServiceContract will be exposed until you explicitly tag them with OperationContract attribute.
+			A few implementation constraints on the service implementation class.
+				a) You should avoid parameterized constructors, because WCF will only use the default constructor.
+		2] Data Contracts
+		3] Fault Contracts
+		4] Message Contracts
+
+>> Hosting
+	- Every WCF process needs to be hosted in a windows process called Host Process.
+		1] A Single host process can host multiple services.
+		2] Same service type can be hosted on multiple host processes.
+		3] The host process can also be a client process, separate process is recommended though for fault and security isolation.
+	- InProcess (or in-proc) hosting is a special case where the hosting process is same as the client process. The developer provides the host in this case.
+	- Types of hosting :
+		IIS Hosting
+			a) Advantage is that host process is launched upon intial client request and IIS manages the lifecycle of the host process.
+			b) Disadvantage is that IIS only allows HTTP protocol.
+			c) Hosting in IIS need to provide a virtual directory under IIS and supply an .svc file.
+					** You can even inject the service code inline in the .svc file, but that is not advisable.
+			d) When you use IIS hosting, the base address used for the service always has to be the same as the address of the .svc file.
+
+
 	
 >> Service Library (SL) vs Service Application (SA)
 	- SL contains Interfaces and Classes
@@ -146,7 +198,9 @@ Concurency in WCF ?
 IModelBinder is present in 2 different namespace, Why ?
 IModelBinderProvider ?
 
-
+Azure Service Bus : 
+	The Azure Service Bus is as an indispensable tool for the modern developer who is creating connected systems on any platform. 
+	The Azure Service Bus has grown into a fully fledged connectivity platform with a diverse set of features.
 
 
 
@@ -156,3 +210,6 @@ IModelBinderProvider ?
 Articles :
 ==========
 http://www.wcftutorial.net/
+Programming WCF Services,4th Edition.pdf 
+	>> Chapter 1 : WCF Essentials >> Page 14 >> The Web.Config File
+	>> Chapter 1 : WCF Essentials >> Page 15 >> Self Hosting

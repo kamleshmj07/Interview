@@ -1,6 +1,15 @@
-MVC pdf (lastpart)
-C# Advanced
-WCF Services
-Design Patterns
-Collections
-ASP .Net
+1] Read ASP.net from Pro C#
+
+
+
+
+
+
+WCF :
+WCF client may interoperate with Non WCF Services
+WCF service may interoperate with Non WCF Client
+WCF hosting in IIS : Create a service and host it on IIS.
+WCF hosting on WAS : Create a service and host it on WAS.
+
+C# :
+Out parameter in Ctor
