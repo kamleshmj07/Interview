@@ -1,3 +1,12 @@
+>> The HTTP Request/Response Cycle
+	- When a client machine launches a web browser (such as Google Chrome, Opera, Mozilla Firefox, Apple Safari, or Microsoft Internet Explorer), 
+	  an HTTP request is made to access a particular resource (typically a web page) on the remote server machine.
+	- HTTP is a text-based protocol that is built upon a standard request/ response paradigm.
+	  For example, if you navigate to http://www.facebook.com, the browser software leverages a web technology termed 
+	  Domain Name Service (DNS) that converts the registered URL into a numerical value termed an IP address.
+	  At this point, the browser opens a socket connection (typically via port 80 for a nonsecure connection) and 
+	  sends the HTTP request for processing to the target site.
+
 >> What is MVC ?
 	- Architectural pattern seperating 3 different concerns i.e.
 		1] Model => Classes Defined

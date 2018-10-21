@@ -32,4 +32,38 @@
     
 >> Stack vs. Heap: What's the difference?
     - https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/
-    
+	
+>> Namespace
+	- Any namespace nested within Microsoft (e.g., Microsoft.CSharp, Microsoft.ManagementConsole,
+	  Microsoft.Win32) contains types that are used to interact with services unique to the Windows operating
+	  system. Given this point, you should not assume that these types could be used successfully on other
+	  .NET-enabled operating systems such as Mac OS X. For the most part, this text will not dig into the
+	  details of the Microsoft rooted namespaces, so be sure to consult the .NET Framework 4.5 SDK
+	  documentation if you are interested.
+	  
+>> Open source distributioon of CLI
+	- http://www.mono-project.com/ The Mono project targets various Linux distributions (e.g., SuSe, Fedora), Mac OS X, iOS devices (iPad, iPhone), Android devices, and (surprise!) Windows.
+	- http://www.dotgnu.org/ Portable.NET is another open source distribution of the CLI that runs on numerous operating systems (e.g., Windows, AIX, Mac OS X, Solaris, all major Linux distributions).
+	
+>> WinRT
+	- Programming a Windows 8 application requires developers to tap into an entirely new runtime layer
+	  termed (appropriately enough) Windows Runtime (WinRT). Be very aware that WinRT is not the .NET
+	  CLR, however it does offer some similar services such as garbage collection, support for multiple
+	  programming languages (including C#), and so forth.
+	  
+>> SharpDevelop 
+	- SharpDevelop is an open source and feature-rich IDE that you can utilize to build .NET assemblies
+	  using C#, VB, Iron Ruby, Iron Python, C++ F#, or a Python-inspired .NET language named Boo. Beyond
+	  the fact that this IDE is completely free, it is interesting to note that it was written entirely in C#. 
+	- In fact, you have the choice to download and compile the *.cs files manually or run a setup.exe program to
+	  install SharpDevelop on your development machine. 
+	- Both distributions can be obtained from http://www.sharpdevelop.com
+	
+>> Visual Studio Templates
+	- All code expansion templates are XML-based descriptions of the code to generate within the IDE.
+	- Using Visual Studio (as well as Visual C# Express), you can create your own custom code templates. 
+	- Details of how to do so can be found in my article “Investigating Code Snippet Technology” at http://msdn.microsoft.com/en-US/library/ms379562
+
+
+	
+	

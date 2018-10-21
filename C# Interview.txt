@@ -4,7 +4,7 @@
 	2] Inheritance: How does this language promote code reuse?
 		+ Extend behavior of base type, Aggregation or "has-a" relationship.
 	3] Polymorphism: How does this language let you treat related objects in a similar way? 
-
+	
 >> What is a struct ?
 	- User defined data type, which can have any number of data fields and data members.
 	- Struct can be initialized with or without "new" keyword.
@@ -58,7 +58,11 @@
 >> Object Initializers
 	- Syntax/Way to set early state of an object without having a constructor.
 
->> What are Nullable types ?
+>> The Checked Keyword
+	- It is used to handle overflow or underflow conditions which donot throw exceptions in your application.
+	
+	
+	>> What are Nullable types ?
 	- A nullable type can represent all the values of its underlying type, plus the value "null".
 	- It is helpful when working with the relational databases.
 	- The "?" suffix notation is a shorthand for creating an instance of the generic System.Nullable<T> structure type.
@@ -98,8 +102,7 @@
 	- https://stackoverflow.com/questions/55984/what-is-the-difference-between-const-and-readonly
 	- https://www.codeproject.com/Tips/803656/Practical-Difference-between-Const-ReadOnly
 
->> The Checked Keyword
-	- It is used to handle overflow or underflow conditions in your application.
+
 	
 >> Access Modifiers
 	- Type :	1] Public
@@ -338,6 +341,10 @@ a custom return value.
 	
 Additional Qns
 --------------
+What is System.Numerics namespace ?  (Also read on BigInteger)
+	It defines a second structure named Complex, which allows you to 
+	model mathematically complex numerical data (e.g., imaginary units, real data, hyperbolic tangents). 
+
 What happens if the inherited interfaces have conflicting method names?
 What are the differences between IEnumerable and IQueryable?
 What is delegates in C# and uses of delegates? https://www.c-sharpcorner.com/UploadFile/f954f5/delegate-in-C-Sharp/

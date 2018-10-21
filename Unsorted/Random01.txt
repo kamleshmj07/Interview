@@ -1,0 +1,17 @@
+write an algorithm to reverse an array and then write another to find a missing number in a series of numbers.
+
+Not difficult.... Code a Deck and Card class then three sql questions that involve the use of JOINs and one that involves the use of COUNT / DISTINCT or COUNT / GROUP BY. 
+
+Write pseudo code to play the game fizz-buzz 
+
+2. For those towns which have more than one company in them, calculate (in one query):
+· The total number of employees in the town.
+· The average number of employees in a company (per town).
+· The average number of employees in a company (per town) only for companies which
+have less than 20 employees.
+The results should exclude London and be sorted in descending order of the total number of
+employees in the town.… 
+
+With reference to Table1 and Table2, write one query, which will select those records from Table2
+that do not exist in Table1, and then insert those records into Table1. Without using sub queries or
+merge.  
