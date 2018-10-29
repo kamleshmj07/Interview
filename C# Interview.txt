@@ -6,6 +6,7 @@
 	3] Polymorphism: How does this language let you treat related objects in a similar way? 
 	
 >> What is a struct ?
+	- Structure types are well suited for modeling mathematical, geometrical, and other "atomic" entities in your application.
 	- User defined data type, which can have any number of data fields and data members.
 	- Struct can be initialized with or without "new" keyword.
 		1] Without "new" keyword : All data fields should be initialized, else throws compile-time error.
@@ -58,11 +59,53 @@
 >> Object Initializers
 	- Syntax/Way to set early state of an object without having a constructor.
 
->> The Checked Keyword
+>> The checked keyword
 	- It is used to handle overflow or underflow conditions which donot throw exceptions in your application.
 	
+>> out modifier
+	- To return a value to the caller we use out modifier, we can get multiple values using this modifier.
+	- A method that defines out parameter must assign the parameter to a valid value before exiting the method scope else gives compile time error.
+	- The out parameter need not be initialized before passing to method.
 	
-	>> What are Nullable types ?
+>> ref modifier
+	- To pass a value type as a reference we use the ref modifier.
+	- If a reference type is passed by reference, the callee may change the values of the object's state data, as well as the object it is referencing.
+	- If a reference type is passed by value, the callee may change the values of the object's state data, but not the object it is referencing.
+
+>> params modifier
+	- Used to pass multiple parameters to a method.
+	- Example : static double CalculateAverage(params double[] values) // CalculateAverage(4.0, 3.2, 5.7, 64.22, 87.2);
+
+>> Optional parameter
+	- Always should be listed after the non-optional parameters.
+	- Should have a default value which is resolved at the compile time.
+	- Both of above rules if not followed result in commpile-time error.
+	
+>> Method Overloading
+	- The set of methods together in a entity which differ in number of parameters and/or type of parameters and/or return type are said to be overloaded.
+	- It is possible to build generic methods that take the concept of overloading to the next level.
+
+>> enum
+	- An enum is a custom data type of name/value pairs.
+	- The underlying storing type is by default int, and can also be controlled in following manner.
+		enum EmpType : byte
+		{
+		 Manager = 10,
+		 Grunt = 1,
+		 Contractor = 100
+		}
+	- It is limited to byte, sbyte, short, ushort, int, uint, long, ulong
+
+>> Stack vs Heap
+	- The value types are usually allocated on stack, as data allocated on stack can be created and destroyed quickly as its lifetime is determined by the defining scope.
+	- Heap allocated data, on the other hand, is monitored by the .NET garbage collector, and has a lifetime that is determined by a large number of factors.
+	- The System.ValueType overrides all the virtual methods from Object class to use value based.
+	
+>> Passing Reference types as Reference types to a method
+	- If a reference type is passed by reference, the callee may change the values of the object’s state data, as well as the object it is referencing.
+	- If a reference type is passed by value, the callee may change the values of the object’s state data, but not the object it is referencing. 
+
+>> What are Nullable types ?
 	- A nullable type can represent all the values of its underlying type, plus the value "null".
 	- It is helpful when working with the relational databases.
 	- The "?" suffix notation is a shorthand for creating an instance of the generic System.Nullable<T> structure type.
@@ -77,21 +120,13 @@
 	- For types directly placed in a namespace, the default modifier is internal.
 	- For types and members placed in a type (like a class or structure), the default modifier is private.
 	- In C# nothing is public unless stated so
-	
->> params modifier
-	- Used to pass multiple parameters to a method.
-	- Example : static double CalculateAverage(params double[] values) // CalculateAverage(4.0, 3.2, 5.7, 64.22, 87.2);
-	
->> ref modifier
-	- To pass a value type as a reference we use the ref modifier.
-	- If a reference type is passed by reference, the callee may change the values of the object's state data, as well as the object it is referencing.
-	- If a reference type is passed by value, the callee may change the values of the object's state data, but not the object it is referencing.
-	
->> out modifier
-	- To return a value to the caller we use out modifier, we can get multiple values using this modifier.
-	- A method that defines out parameter must assign the parameter to a valid value before exiting the method scope else gives compile time error.
-	- The out parameter need not be initialized before passing to method.
-	
+	- Type :	
+				1] Public
+				2] Private
+				3] Protected
+				4] Internal
+				5] Protected Internal
+		
 >> readonly modifier
 	- Initialize a field only once. Can be initialized in a constructor.
 	- Static readonly field can be initialized in a static constructor.
@@ -102,14 +137,6 @@
 	- https://stackoverflow.com/questions/55984/what-is-the-difference-between-const-and-readonly
 	- https://www.codeproject.com/Tips/803656/Practical-Difference-between-Const-ReadOnly
 
-
-	
->> Access Modifiers
-	- Type :	1] Public
-				2] Private
-				3] Protected
-				4] Internal
-				5] Protected Internal
 
 >> Properties
 	- Class member that encapsulates a setter/getter for accessing a field.
@@ -379,3 +406,7 @@ Articles :
 http://www.yoda.arachsys.com/csharp/
 https://www.c-sharpcorner.com/UploadFile/8ef97c/C-Sharp-net-interview-questions-and-answers/
 https://www.c-sharpcorner.com/article/solid-single-responsibility-principle-with-c-sharp/
+
+Potential Article :
+===================
+Method overloading alternative to build the method using generic and params modifier
