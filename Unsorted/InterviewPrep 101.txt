@@ -1,0 +1,87 @@
+Written Coding	
+	1] Tower of Hanoi
+	2] Array-based question
+	3] Swapping 2 numbers without using third variable
+	4] 
+DS : 
+	Linked list , Arrays, Trees, Stacks, Queues, Implementation of Hashmap like structure,
+	String reverse, binary search, sorting, swapping.
+	Find the maximum occurance of character count from string AAAAfghaaaa, if there are 2 char with same count, then print character with the smallest ASCII value. Here output is A.
+	Reverse a number.
+	Find duplicates in an array using min iterations.
+	Doubly linked list.
+	Write a program to check palindrome
+	Write a program that returns the index of an array in which the sum of numbers before that index and sum of numbers after that index are equal.
+DB :
+	Transactions
+	Delete of duplicates
+	Indexing
+	Performance
+Project
+OOPS
+Designing concepts
+Thread programs
+MVC :
+	Content negotiation in mvc
+
+Process thread difference, which is better.
+Difference b/w method overloading and overriding
+Exception handling.
+If your frequent operation is searching which collection class should be used? HashSet 
+Page life cycle
+
+Concurrenthashmap in C#
+Countdownlatches, Cyclic Barrier
+ArrayList
+Shallow and deep Cloning, interface inheritance and implementation inheritance, aggregation ,composition
+wait, notify and notifyall
+threading, exceptions, collections
+Sql query to find out second highest salary of employee  
+WCF
+SQL Server and the questions put forward were right from the basics, normalizaiton and T-SQL programming.
+explicit implementation of interfaces, how to implement a http handler
+oops,C#,collections,WCF,asp.etc
+new String() - how max size of string we can pass using String constructor.
+-What are the design patterns used in JSF?
+-Many to Many relationship in hibernate.
+-How to read a DB table which is very large number of records and insert into other same table?
+-OOPS principle
+-Difference between encapsulation and abstraction?
+-What is cloning?
+-Why we need serialization?
+-When to use interface and abstract class?
+-ConcurrentModificationException? How to avoid it.
+-How to communicate using web service by making data securely?
+-How to make a class immutable?  
+-Thread sequencing
+-What is hashmap and hashtable?
+Print your name with recursive function
+Basics and tricky questions on primitive/non-primitive data types
+Web Service consuming without wsdl.
+SQL joins  
+Design Patterns - Singleton and Factory 
+1.Design a coffee vending machine.
+2. One simple map problem. (Finding unique key value pairs)
+internal implementation of arraylist  
+How to edit the data using the sessionid of another user.
+Differences between the cache and cookie?  
+WCF and LINQ
+
+SQL and .Net
+	What is the difference between Nvarchar and varchar?
+	How to delete duplicate rows form a table?
+	Can we update a view?
+	Commit and Rollback
+	Update query
+	What is view?
+	What is index?
+	What are joins? 
+	Normalization
+	OOP concepts
+	C# Inheritance
+	Polymorphism
+	What is array ?
+	Algorithm used in Collections.sort() method
+	
+Write c program one pattern
+276 C#

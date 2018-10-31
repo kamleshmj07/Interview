@@ -20,6 +20,9 @@
 	- It is a user defined data type with data fields and data members.
 	- Ideally a class should follow Single Responsibility Principle (SRP).
 
+>> What is the difference between a struct and a class in C#?
+	- https://www.c-sharpcorner.com/UploadFile/yougerthen/what-really-make-difference-between-structures-and-classes/		
+	
 >> What is a object ?
 	- Instance of a class that resides on a managed heap memory.
 
@@ -115,7 +118,7 @@
 		// GetIntFromDatabase() returns nullable int.
 		// If the value from GetIntFromDatabase() is null, then	assign local variable to 100.
 		int myData = dr.GetIntFromDatabase() ?? 100;
-	
+		
 >> Access Modifiers	
 	- For types directly placed in a namespace, the default modifier is internal.
 	- For types and members placed in a type (like a class or structure), the default modifier is private.
@@ -137,7 +140,6 @@
 	- https://stackoverflow.com/questions/55984/what-is-the-difference-between-const-and-readonly
 	- https://www.codeproject.com/Tips/803656/Practical-Difference-between-Const-ReadOnly
 
-
 >> Properties
 	- Class member that encapsulates a setter/getter for accessing a field.
 	- Autoimplemented properties are the ones which do not need field declaration, clr creates for us.
@@ -151,9 +153,10 @@
 			set {...}
 		}
 	- Example : HttpCookie
-	
->> Coupling
-	- Understand Encapsulation, Relationships between classes and Interfaces to implement loosely coupled architecture.
+
+>> Sealed keyword
+	- It prevents overriding of a method if applied to a method.
+	- It prevents a class to be inherited if applied to a class.
 	
 >> Inheritance
 	- Is-A relationship is inheritance.
@@ -176,6 +179,39 @@
 	- Base class constructors are always called first.
 	- : base(..) keyword calls parameterized Base class ctor.
 	
+>> Coupling
+	- Understand Encapsulation, Relationships between classes and Interfaces to implement loosely coupled architecture.
+	
+>> Abstract Classes 
+	- Abstract class is a class which is required to define a common functionality for it's derived classes, 
+	  but we never intend to create an instance of the same as it is a too general of a concept.
+	- There is no implementation for abstract member.
+	- If member is abstract then containing class needs to be declared abstract too.
+	- If a method is virtual in a non abstract class A,then class B : A need not mandatorily define or override the virtual method of class A. 
+	  To avoid this we need to make class A as abstract.
+	- Abstract class can have non abstract members.
+	- Abstract class cannot be instantiated.
+	
+>> Can abstract class have a constructor ?
+	- A constructor for an abstract class is required only when you need to initialize certain fields of an abstract class before the instantiation of a child class takes place.
+	- Ex : Guid for derived classes (global unique id)
+	- Protected identifier should be used.
+
+>> Method Overriding
+	- Changing the implementation of an inherited method.
+	- Default Implementation : Virtual keyword
+	  New Implementation : Override keyword
+	- Overridden method is free to levareage base implementation  by using base keyword for calling base method.
+
+>> Member Shadowing (new keyword)
+	- Formally speaking, if a derived class defines a member that is identical to a member defined in a base class, the
+	  derived class has shadowed the parent’s version. In the real world, the possibility of this occurring is the greatest 
+	  when you are subclassing from a class you (or your team) did not create yourselves (for example, if you purchase a third-party .NET software package).
+	- In such cases, with the help of "new" keyword we can hide the parent class iherited method/implementation. 
+	  Here we cannot change the parent class method and assign vitrual keyword to the same.
+	- new keyword can be used with fields, properties, static member, const as well.
+	- Finally, be aware that it is still possible to trigger the base class implementation of a shadowed member using an explicit cast
+	
 >> Upcasting & Downcasting (Watch .Net/C#/Class Interfaces OOP with Mosh P15)
 	- Conversion of a derived class to base class is UPCASTING.
 		Base obj = Child obj;
@@ -184,36 +220,15 @@
 			ArrayList takes Object obj.
 	- Conversion from a base class to derived class is DOWNCASTING.
 		Child obj = (Child)Base obj
-		
+
 >> "as" & "is" keyword
 	- To prevent the InvalidCastingException while downcasting we use "as" keyword.
-	- we use the "is" operator to check the object type
-	
->> Boxing & Unboxing / ValueType & Reference Type
-	- Value type to Reference type storing is Boxing.
-	- Reference type to Value type storing is Unboxing.
-	- https://www.c-sharpcorner.com/article/boxing-and-unboxing/
-	
->> Method Overriding
-	- Changing the implementation of an inherited method.
-	- Default Implementation : Virtual keyword
-	  New Implementation : Override keyword
-	
->> Abstract Classes 
-	- No implementation for abstract member.
-	- If member is abstract then containing class needs to be declared abstract too.
-	- If a method is virtual in a non abstract class A,then class B : A need not mandatorily define or override the virtual method of class A. 
-	  To avoid this we need to make class A as abstract.
-	- Abstract class can have non abstract members.
-	- Abstract class cannot be instantiated.
-	
->> Sealed keyword
-	- It prevents overriding of a method if applied to a method.
-	- It prevents a class to be inherited if applied to a class.
+	- we use the "is" operator to check the object type		
+		
 
->> What is the difference between a struct and a class in C#?
-	- https://www.c-sharpcorner.com/UploadFile/yougerthen/what-really-make-difference-between-structures-and-classes/	
 
+
+		
 >> Interfaces and Testability
 	- It is a language construct similar to a class but it fundamentally different.
 	- Used to build loosely coupled architecture.
@@ -252,6 +267,11 @@
 		}
 		
 		Array.Sort(customTypes);
+
+>> Boxing & Unboxing / ValueType & Reference Type
+	- Value type to Reference type storing is Boxing.
+	- Reference type to Value type storing is Unboxing.
+	- https://www.c-sharpcorner.com/article/boxing-and-unboxing/
 
 		
 >> Exceptions 
