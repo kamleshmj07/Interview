@@ -229,12 +229,28 @@
 
 >> "as" & "is" keyword
 	- To prevent the InvalidCastingException while downcasting we use "as" keyword.
-	- we use the "is" operator to check the object type		
+	- We use the "is" operator to check the object type		
 		
+>> Exceptions
+	- System Exceptions : Exceptions that are thrown by the .NET platform are (appropriately) called system exceptions.
+		+ System exceptions derive directly from a base class named System.SystemException, which in turn derives from System.Exception.
+		+ System.SystemException type does not add any additional functionality beyond a set of custom constructors, we can identify the System Exceptions by using "is-a" keyword.
+	- Application Level Exceptions : Custom Exceptions Type created by deriving from System.ApplicationException class. The System.ApplicationException class too provides just extra constructors.
 
+>> Building Custom Exceptions (Or simply use Visual Studio code snippet)
+	• Derives from Exception/ApplicationException
+	• Is marked with the [System.Serializable] attribute
+	• Defines a default constructor
+	• Defines a constructor that sets the inherited Message property
+	• Defines a constructor to handle “inner exceptions”
+	• Defines a constructor to handle the serialization of your type
 
+>> Multiple Exception 
+	- Make sure your catch blocks are structured such that the very first catch is the most specific exception (i.e., the most derived type in an exception-type inheritance chain), leaving the final catch for the most general (i.e., the base class of a given exception inheritance chain, in this case System.Exception).
+	
+>> Rethrowing Exceptions
+	- Just plain exclusive use of the keyword "throw" allows you to throw the excpeptions further to the method call in the stack.
 
-		
 >> Interfaces and Testability
 	- It is a language construct similar to a class but it fundamentally different.
 	- Used to build loosely coupled architecture.
