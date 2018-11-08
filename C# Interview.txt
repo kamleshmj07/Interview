@@ -27,12 +27,18 @@
 	- Instance of a class that resides on a managed heap memory.
 
 >> What are the methods a class inherits from Object ?
-	- Object itself just defines four methods, that are :
-		1] ToString, which is a very comfortable way of defining how an instance of the type should presented as a string.
-		2] Equals, which is a generic way of comparing two arbitrary objects of equality.
-		3] GetHashCode, which gets a numeric indicator if two objects could be equal.
-		4] GetType, which gets the meta-information on the specific type of the current instance.
-	
+	- Virtual Members :
+		1] bool Equals(Object obj), which is a generic way of comparing two arbitrary objects of equality.
+		2] void Finalize(), this method (when overridden) is called to free any allocated resources before the object is destroyed.
+		3] int GetHashCode(),this method returns an int that identifies a specific object instance.
+		4] strind ToString(), this method returns a string representation of this object, using the <namespace>.<type name> format (or fully qualified name).
+	- Instance Level Members :
+		1] Type GetType(), which gets the meta-information on the specific type of the current instance.
+		2] object MemberwiseClone(), this method exists to return a member-by-member copy of the current object, often used while cloning an object.
+	- Static Members :
+		1] bool Equals(object objA, object objB), checks value based equality.
+		2] bool ReferenceEquals(object objA, object objB), checks reference based equality.
+
 >> What are different types of class members ?
 	- There are 2 types of class members : Instance members and Static members.
 
