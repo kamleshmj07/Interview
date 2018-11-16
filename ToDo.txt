@@ -16,3 +16,14 @@ WCF hosting on WAS : Create a service and host it on WAS.
 
 C# :
 Out parameter in Ctor
+
+
+Integrate with C# Interview :
+============================
+
+>> The ICloneable Interface
+	- When you want to give your custom type the ability to return an identical copy of itself to the caller, you may implement the standard ICloneable interface.
+	public interface ICloneable
+	{
+		object Clone();
+	}
