@@ -256,10 +256,34 @@
 	- Used to build loosely coupled architecture.
 	- Used for Extensibility, change the behavior of the application without changing the existing classes.
 	- Multiple interfaces can be implemented.
+	- Interface types can also contain event and indexer.
 	- Watch Mosh's Interfaces and Testability Part.
 		P20 Introduction Interfaces
 		P21 Interface Testability
 		P22 Interface Extensibility
+
+>> What is IEnumerable<> in c#?
+	- IEnumerable is the parent interface for all non-generic collections in System.Collections namespace like ArrayList, HastTable.
+	- IEnumerable<T> is the parent interface for all generic collections in the System.Collections.Generic .
+	- The Generic version of the Interface has a GetEnumerator() method which returns the IEnumerator.
+	- IEnumerator allows to iterate through the collection by exposing a Current property and also Move(),Next() and Reset() methods.
+		+ If we don't have this interface as a parent then we can’t use foreach loop or can’t use that class's object in our LINQ query.
+		
+	// This interface informs the caller
+	// that the object's subitems can be enumerated.
+	public interface IEnumerable
+	{
+	 IEnumerator GetEnumerator();
+	} 
+	
+	// This interface allows the caller to
+	// obtain a container's subitems.
+	public interface IEnumerator
+	{
+	 bool MoveNext (); // Advance the internal position of the cursor.
+	 object Current { get;} // Get the current item (read-only property).
+	 void Reset (); // Reset the cursor before the first member.
+	} 
 
 >> What is extension method in c# and how to use them?
 	- Extension methods enable you to add methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. 
@@ -267,11 +291,7 @@
 	- Extending Types Implementing Specific Interfaces :  It is also possible to define an extension method that can only extend a class or structure that implements the correct interface.
 	- https://www.c-sharpcorner.com/uploadfile/puranindia/extension-methods-in-C-Sharp-3-0/
 
->> What is IEnumerable<> in c#?
-	- IEnumerable is the parent interface for all non-generic collections in System.Collections namespace like ArrayList, HastTable.
-	- IEnumerable<T> is the parent interface for all generic collections in the System.Collections.Generic .
-	- The Generic version of the Interface has a GetEnumerator() method which returns the IEnumerator.
-	- IEnumerator allows to iterate through the collection by exposing a Current property and Move,Next and Reset methods, if we don't have this interface as a parent then we can’t use foreach loop or can’t use that class object in our LINQ query.
+
 	
 >> The ICloneable interface
 	- Gives your custom type the ability to return an identical copy of itself to the caller.
