@@ -285,6 +285,41 @@
 	 void Reset (); // Reset the cursor before the first member.
 	} 
 
+>> yield keyword 
+	- Another way of forcing Custom enumeration on a custom class or entity.
+	- Custom class has to implement IEnumerator, hence the GetEnumerator() method with the iterator over the custom class and returning with using yield keyword.
+	public IEnumerator GetEnumerator()
+	{
+		foreach (Car c in carArray)
+		{
+			yield return c;
+		}
+	}
+
+>> The ICloneable interface
+	- Gives your custom type the ability to return an identical copy of itself to the caller.
+		public interface ICloneable
+		{
+			object Clone();
+		} 
+	- The implementation should be able to copy the values of your member variables into a new object instance of the same type, and return it to the user.
+	- More elaborate way of cloning (this clones all the value types, but not the reference types i.e. no true deep copy)
+		public object Clone()
+		{ return this.MemberwiseClone(); }
+	- Filling gaps of the solution in the above step
+		// Now we need to adjust for the PointDescription member.
+		public object Clone()
+		{
+			// First get a shallow copy.
+			Point newPoint = (Point)this.MemberwiseClone();
+			
+			// Then fill in the gaps.
+			PointDescription currentDesc = new PointDescription();
+			currentDesc.PetName = this.desc.PetName;
+			newPoint.desc = currentDesc;
+			return newPoint;
+		}
+
 >> What is extension method in c# and how to use them?
 	- Extension methods enable you to add methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. 
 	- An extension method is a special kind of static method, but they are called as if they were instance methods on the extended type.
@@ -293,13 +328,7 @@
 
 
 	
->> The ICloneable interface
-	- Gives your custom type the ability to return an identical copy of itself to the caller.
-		public interface ICloneable
-		{
-			object Clone();
-		} 
-	- The implementation should be able to copy the values of your member variables into a new object instance of the same type, and return it to the user.
+
 
 >> The IComparable interface
 	- It specifies a behavior which allows the object to be sorted based on some specific key.	
@@ -450,7 +479,6 @@ Overloading Indexer Methods.
 Anonymous Type.
 Controlling the Underlying Storage for an enum
 Named Parameters & Optional Parameters
-Yield keyword 
 Building a Named Iterator
 
 >> Can we suppress the Garbage collector? If yes, then why ?
