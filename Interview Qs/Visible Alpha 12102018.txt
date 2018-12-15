@@ -1,0 +1,32 @@
+1] Consider there is one white screen, and in that white screen you have one black dot,
+   if you want to reach that dot, how you will code such that you will always travel shortest path
+2] Lowest common ancestor in a binary search tree
+3] Mirror Tree of given tree
+4] How database is stored on BookmyShow.com website
+5] Tell me the data structure to store the url in browser.
+6] An array is given, you have to find a,b,c which satisfy Pythagoras theorem which is a^2 +b^2 = c^2.
+7] ASP.NET request life cycle
+8] Array sorting
+9] Abstract class vs Interface
+10] Constructor
+11] Reverse Link List
+12] Sorting Algorithms and idea behind each of them
+13] With an unsorted list how to find minimum difference value.
+14] In NxN matrix how to find common numbers in all rows.
+15] Print the matrix in the spiral form
+16] Database design for flights booking page of a travel site
+17] Binary search tree and AVL tree. Difference and advantages of the later on the former. 
+18] Javascript hoisting, event loop, closures, scopes, and versions
+
+Topic
+=====
+Analytics
+Data structures 
+Algorithms
+Stored procedures 
+Complex SQL queries
+Database design problems
+DS binary tree, shortest path first
+Multithreading
+MVC
+C#
