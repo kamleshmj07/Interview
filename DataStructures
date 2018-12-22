@@ -1,19 +1,34 @@
 >> What is DataStructure ?
-	- A data structure is a special format for organizing and storing data.
+	- A data structure is a special format for organizing and storing data. General data structure types include arrays, files, linked
+lists, stacks, queues, trees, graphs and so on.
   
 >> Type of Datastructures
-	- Linear structures : Elements are accessed in a sequential order but it is not compulsory to store all elements sequentially.
-	- Non Linear structures : Elements are stored/accessed in a non linear manner.
-  
->> Analysis	of	Algorithms
-	- For an application there are many important things like user friendliness, modularity, security, maintainability, etc.
-	- Performance is like currency through which we can buy all the above things. Another reason for studying performance is – speed is fun!
-	
->> What is Asymptotic Analysis / Running Time Analysis ?
-	- It is a way of performance analysis for given algorithm in terms of varying input size.
-	- We ignore constants in this analysis. But this is the best way possible for studying performance for an algorithm.
-	
+	- Linear : Elements are accessed in a sequential order but it is not compulsory to store all elements sequentially. (Linked Lists, Stacks and
+Queues)
+	- Non-Linear : Elements are stored/accessed in a non linear manner. (Trees and graphs)
+  	
 >> What is Abstract Data Types (ADT) ?
-	- To simplify the process of solving problems we combine the datastructures with the operations. We call this as ADT. ex: Linked List, Stack, Queues, Dictionaries.
+	- An ADT consists of two parts:
+		1. Declaration of data
+		2. Declaration of operations
+	- While defining the ADTs do not worry about the implementation details.
+
+>> What is an Algorithm ?
+	- An algorithm is the step-by-step unambiguous instructions to solve a given problem.
+	- Mainly the efficiency along with the correctness matters for any algorithm.
 	
->> 	
+>> What is Running Time Analysis?
+	- It is the process of determining how processing time increases as the size of the problem (input size) increases.
+	- Input size is the number of elements in the input, and depending on the problem type, the input may be of different types. 
+	- The following are the common types of inputs :
+		a) Size of an array
+		b) Polynomial degree
+		c) Number of elements in a matrix
+		d) Number of bits in the binary representation of the input
+		e) Vertices and edges in a graph.
+	- The running time of a given algorithm is a function of the input size n (i.e., f(n)).
+
+>> Rate of growth
+	- The rate at which the running time increases as a function of input is called rate of growth.
+		ex : n^4 is the highest rate of growth in n^4 + 2n^2 + 100n + 50
+	- 
