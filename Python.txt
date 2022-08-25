@@ -21,9 +21,13 @@ Magic Methods
   - Some examples include __add__(), __abs__(), __round__(), __floor__(), __str__(), __trunc__(), __lshift__() etc. 
   - The expression number + 5 is the same as number.__add__(5) and this is internally called by other methods or actions.
   - You can directly use these functions as it will decrease the run time of your code due to the fact that now due to direct use, we will be reducing a function call each time.
-  
- 
 
+Descriptors : https://www.geeksforgeeks.org/descriptor-in-python/
+ 
+Singleton in python : https://www.geeksforgeeks.org/singleton-method-python-design-patterns/
+
+Class method vs Static method in Python
+  - 
 
 
 
@@ -50,14 +54,6 @@ Class
 Object
   - It is an instance of a class representing a unique state which may or may not differentiate it's behavior from other objects of same class
 
-The self
-  - self represents the instance of the class.
-  - By using the “self”  we can access the attributes and methods of the class in python.
-
-The __init__ method : https://www.geeksforgeeks.org/__init__-in-python/
-  - This method acts as a constructor for class
-  - It is run as soon as an object of a class is instantiated
-
 Inheritance
   - Inheritance is the capability of one class to derive or inherit the properties from another class.
   - Types of Inheritance
@@ -73,6 +69,31 @@ Inheritance
       4] Multiple Inheritance:
           Multiple level inheritance enables one derived class to inherit properties from more than one base class.
 
+The self
+  - self represents the instance of the class.
+  - By using the “self”  we can access the attributes and methods of the class in python.
+
+The __init__ method : https://www.geeksforgeeks.org/__init__-in-python/
+  - This method acts as a constructor for class
+  - It is run as soon as an object of a class is instantiated
+  
+The __del__ method : 
+  - This methods acts as a destructor for class
+  - It is run at the end of the program or as soon as we perform >> del obj
+
+What is Class Method in Python? 
+  - A class method is a method that is bound to the class and not the object of the class.
+  - They have the access to the state of the class as it takes a class parameter that points to the class and not the object instance.
+  - It can modify a class state that would apply across all the instances of the class. For example, it can modify a class variable that will be applicable to all the instances.
+
+What is the Static Method in Python?
+  - A static method does not receive an implicit first argument.
+  - A static method is also a method that is bound to the class and not the object of the class.
+  - This method can’t access or modify the class state.
+  - It is present in a class because it makes sense for the method to be present in class.
+
+
+-----------------------
 Python Coding Programs:
 -----------------------
 #------------------------------ A simple generator for Fibonacci Numbers
