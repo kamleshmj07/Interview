@@ -15,7 +15,14 @@ Generators : https://www.geeksforgeeks.org/generators-in-python/
   - A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
   - If the body of a def contains yield, the function automatically becomes a generator function.
 
-
+Magic Methods
+  - Also called Dunder (or double underscore) methods, magic methods are special types of functions that are invoked internally.
+  - They start and end with double underscores.
+  - Some examples include __add__(), __abs__(), __round__(), __floor__(), __str__(), __trunc__(), __lshift__() etc. 
+  - The expression number + 5 is the same as number.__add__(5) and this is internally called by other methods or actions.
+  - You can directly use these functions as it will decrease the run time of your code due to the fact that now due to direct use, we will be reducing a function call each time.
+  
+ 
 
 
 
