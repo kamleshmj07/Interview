@@ -1,0 +1,98 @@
+First Class Objects
+  - In Python, functions are first class objects which means that functions in Python can be used or passed as arguments.
+  - Properties of first class functions:
+      A function is an instance of the Object type.
+      You can store the function in a variable.
+      You can pass the function as a parameter to another function.
+      You can return the function from a function.
+      You can store them in data structures such as hash tables, lists, …
+
+Decorators : https://www.geeksforgeeks.org/decorators-in-python/
+  - Decorators are a part of Python’s metaprogramming which are used to add additional functionality to existing code without altering the original structure at compile time. 
+  - In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
+  
+Generators : https://www.geeksforgeeks.org/generators-in-python/
+  - A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
+  - If the body of a def contains yield, the function automatically becomes a generator function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Python OOP Questions:
+---------------------
+Class
+  - It is a complex but logical data type defined with a unique state and behavior
+
+Object
+  - It is an instance of a class representing a unique state which may or may not differentiate it's behavior from other objects of same class
+
+The self
+  - self represents the instance of the class.
+  - By using the “self”  we can access the attributes and methods of the class in python.
+
+The __init__ method : https://www.geeksforgeeks.org/__init__-in-python/
+  - This method acts as a constructor for class
+  - It is run as soon as an object of a class is instantiated
+
+Inheritance
+  - Inheritance is the capability of one class to derive or inherit the properties from another class.
+  - Types of Inheritance
+      1] Single Inheritance:
+          Single-level inheritance enables a derived class to inherit characteristics from a single-parent class.
+
+      2] Multilevel Inheritance:
+          Multi-level inheritance enables a derived class to inherit properties from an immediate parent class which in turn inherits properties from his parent class.
+
+      3] Hierarchical Inheritance:
+          Hierarchical level inheritance enables more than one derived class to inherit properties from a parent class.
+
+      4] Multiple Inheritance:
+          Multiple level inheritance enables one derived class to inherit properties from more than one base class.
+
+Python Coding Programs:
+-----------------------
+#------------------------------ A simple generator for Fibonacci Numbers
+def fib(limit):
+      
+    # Initialize first two Fibonacci Numbers 
+    a, b = 0, 1
+  
+    # One by one yield next Fibonacci Number
+    while a < limit:
+        yield a
+        a, b = b, a + b
+  
+# Create a generator object
+x = fib(5)
+  
+# Iterating over the generator object using next
+print(x.next()) # In Python 3, __next__()
+print(x.next())
+print(x.next())
+print(x.next())
+print(x.next())
+  
+# Iterating over the generator object using for
+# in loop.
+print("\nUsing for in loop")
+for i in fib(5): 
+    print(i)
+-------------------------------------------------------------------------
+
