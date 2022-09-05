@@ -1,0 +1,15 @@
+############ SOLID
+Single Responsibility Principle
+	- https://www.youtube.com/watch?v=5RwhyZnVRS8
+Open Closed Principle
+	- https://www.youtube.com/watch?v=VFlk43QGEgc
+Liskov Substitution Principle 
+	- S when subSet (or subType) of T should be replacable without breaking code
+	- https://www.youtube.com/watch?v=-3UXq2krhyw
+Interface Segregation Principle 
+	- Client should not be dependent on the Interfaces they donot use
+	- https://www.youtube.com/watch?v=y1JiMGP51NE
+Dependency Inversion Principle
+	- High Level model should not depend on Low level model, rather depend on abstraction
+	- https://www.youtube.com/watch?v=NnZZMkwI6KI
+
