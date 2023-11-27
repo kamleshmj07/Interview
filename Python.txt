@@ -10,6 +10,7 @@ First Class Objects
 Decorators : https://www.geeksforgeeks.org/decorators-in-python/
   - Decorators are a part of Python’s metaprogramming which are used to add additional functionality to existing code without altering the original structure at compile time. 
   - In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
+  - https://www.codementor.io/@sheena/advanced-use-python-decorators-class-function-du107nxsv
   
 Generators : https://www.geeksforgeeks.org/generators-in-python/
   - A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
@@ -26,8 +27,19 @@ Descriptors : https://www.geeksforgeeks.org/descriptor-in-python/
  
 Singleton in python : https://www.geeksforgeeks.org/singleton-method-python-design-patterns/
 
-Class method vs Static method in Python
-  - 
+Monkey patching is changing the behaviour of a function or object after it has already been defined.
+
+What is the Python “with” statement designed for?
+  - The `with` statement is used for exception handling to make code cleaner and simpler.
+  - It is generally used for the management of common resources like creating, editing, and saving a file.
+
+
+
+Python in-built:
+  - What is the range() function and what are its parameters? range([start], stop[, step])
+  - PEP or Python Enhancement Proposal is a set of rules that specify how to format Python code for maximum readability.
+  - Shallow copy and Deep copy
+
 
 
 
@@ -92,6 +104,7 @@ What is the Static Method in Python?
   - This method can’t access or modify the class state.
   - It is present in a class because it makes sense for the method to be present in class.
 
+@classmethod, @staticmethod, @property?
 
 -----------------------
 Python Coding Programs:
@@ -123,4 +136,11 @@ print("\nUsing for in loop")
 for i in fib(5): 
     print(i)
 -------------------------------------------------------------------------
+https://www.codementor.io/@sheena/essential-python-interview-questions-du107ozr6
+-------------------------------------------------------------------------
+https://www.toptal.com/python/interview-questions
+-------------------------------------------------------------------------
 
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
