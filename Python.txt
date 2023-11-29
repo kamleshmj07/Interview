@@ -11,6 +11,7 @@ Decorators : https://www.geeksforgeeks.org/decorators-in-python/
   - Decorators are a part of Python’s metaprogramming which are used to add additional functionality to existing code without altering the original structure at compile time. 
   - In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
   - https://www.codementor.io/@sheena/advanced-use-python-decorators-class-function-du107nxsv
+  - https://realpython.com/primer-on-python-decorators/
   
 Generators : https://www.geeksforgeeks.org/generators-in-python/
   - A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
