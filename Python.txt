@@ -1,3 +1,114 @@
+------------------------------------------- Python Basics
+Q: What is a dynamically typed language?
+
+  - Typing refers to type-checking in programming languages.
+  - In a strongly-typed language, such as Python, "1" + 2 will result in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types). On the other hand, a weakly-typed language, such as Javascript, will simply output "12" as result.
+  - Type-checking can be done at two stages:
+    1) Static - Data Types are checked before execution.
+    2) Dynamic - Data Types are checked during execution.
+  - Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.
+
+
+Q: What is PEP 8 and why is it important?
+  - PEP stands for Python Enhancement Proposal. 
+  - A PEP is an official design document providing information to the Python community, or describing a new feature for Python or its processes. 
+  - PEP 8 is especially important since it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community requires you to follow these style guidelines sincerely and strictly.
+
+
+Q: What are lists and tuples? What is the key difference between the two?
+  - Lists and Tuples are both sequence data types that can store a collection of objects in Python.
+  - The objects stored in both sequences can have different data types. 
+      1) Lists are represented with square brackets ['sara', 6, 0.19], while tuples are represented with parantheses ('ansh', 5, 0.97).
+  - The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner. 
+
+
+**Q: Python provides type() and isinstance() functions to check the type of variables.
+
+
+Q: What are global, protected and private attributes in Python?
+  - Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the "global" keyword.
+  - Protected attributes are attributes defined with an underscore prefixed to their identifier.
+      1) eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
+  - Private attributes are attributes with double underscore prefixed to their identifier
+      1) eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made.
+
+
+Q: What is the use of "self" in Python?
+  - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. 
+
+
+Q: What is __init__?
+  - __init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created.
+
+
+Q: What is slicing in Python?
+  - As the name suggests, ‘slicing’ is taking parts of.
+  - Syntax for slicing is [start : stop : step]
+  - Slicing can be done on strings, arrays, lists, and tuples.
+
+
+Q: What is the difference between Python Arrays and lists?
+  - Arrays in python can only contain elements of same data types i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.
+  - Lists in python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.
+
+
+Q: How is memory managed in Python?
+  - Memory management in Python is handled by the Python Memory Manager. The memory allocated by the manager is in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being private, it is inaccessible to the programmer. Though, python does provide some core API functions to work upon the private heap space.
+  - Additionally, Python has an in-built garbage collection to recycle the unused memory for the private heap space.
+
+
+Q: What are decorators in Python?
+  - Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. 
+  - They are represented the @decorator_name in Python and are called in a bottom-up fashion.
+  - Decorators are a part of Python’s metaprogramming which are used to add additional functionality to existing code without altering the original structure at compile time. 
+  - In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
+  - https://www.codementor.io/@sheena/advanced-use-python-decorators-class-function-du107nxsv
+  - https://realpython.com/primer-on-python-decorators/
+  - https://www.geeksforgeeks.org/decorators-in-python/
+
+
+Q: What are Dict and List comprehensions?
+  - Python comprehensions, like decorators, are syntactic sugar constructs that help build altered and filtered lists, dictionaries, or sets from a given list, dictionary, or set. 
+  - Using comprehensions saves a lot of time and code that might be considerably more verbose (containing more lines of code).  
+
+
+Q: What is lambda in Python? Why is it used?
+  - Lambda is an anonymous function in Python, that can accept any number of arguments, but can only have a single expression. It is generally used in situations requiring an anonymous function for a short time period.
+  - Lambda functions can be used in either of the two ways:
+    1) Assigning lambda functions to a variable:
+      mul = lambda a, b : a * b
+      print(mul(2, 5))    # output => 10
+    2) Wrapping lambda functions inside another function:
+      def myWrapper(n):
+        return lambda a : a * n
+      mulFive = myWrapper(5)
+      print(mulFive(2))   # output => 10
+
+
+Q: How do you copy an object in Python?
+  - In Python, the assignment statement (= operator) does not copy objects. Instead, it creates a binding between the existing object and the target variable name.
+  - To create copies of an object in Python, we need to use the copy module.
+  - Moreover, there are two ways of creating copies for the given object using the copy module:
+    1) Shallow Copy is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values is a reference to other objects, just the reference addresses for the same are copied.
+    2) Deep Copy copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 First Class Objects
   - In Python, functions are first class objects which means that functions in Python can be used or passed as arguments.
   - Properties of first class functions:
@@ -7,12 +118,6 @@ First Class Objects
       You can return the function from a function.
       You can store them in data structures such as hash tables, lists, …
 
-Decorators : https://www.geeksforgeeks.org/decorators-in-python/
-  - Decorators are a part of Python’s metaprogramming which are used to add additional functionality to existing code without altering the original structure at compile time. 
-  - In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
-  - https://www.codementor.io/@sheena/advanced-use-python-decorators-class-function-du107nxsv
-  - https://realpython.com/primer-on-python-decorators/
-  
 Generators : https://www.geeksforgeeks.org/generators-in-python/
   - A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. 
   - If the body of a def contains yield, the function automatically becomes a generator function.
