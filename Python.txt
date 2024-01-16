@@ -1,6 +1,5 @@
 ------------------------------------------- Python Basics
 Q: What is a dynamically typed language?
-
   - Typing refers to type-checking in programming languages.
   - In a strongly-typed language, such as Python, "1" + 2 will result in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types). On the other hand, a weakly-typed language, such as Javascript, will simply output "12" as result.
   - Type-checking can be done at two stages:
@@ -31,14 +30,6 @@ Q: What are global, protected and private attributes in Python?
       1) eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
   - Private attributes are attributes with double underscore prefixed to their identifier
       1) eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made.
-
-
-Q: What is the use of "self" in Python?
-  - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. 
-
-
-Q: What is __init__?
-  - __init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created.
 
 
 Q: What is slicing in Python?
@@ -148,68 +139,16 @@ Q: What does *args and **kwargs mean?
     # arg3: argument 3
 
 
+Q: Why is finalize used?
+  - Finalize method is used for freeing up the unmanaged resources and clean up before the garbage collection method is invoked. This helps in performing memory management tasks
 
 
-
-------------------------------------------- Python OOPs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-First Class Objects
-  - In Python, functions are first class objects which means that functions in Python can be used or passed as arguments.
-  - Properties of first class functions:
-      A function is an instance of the Object type.
-      You can store the function in a variable.
-      You can pass the function as a parameter to another function.
-      You can return the function from a function.
-      You can store them in data structures such as hash tables, lists, …
-
-
-Magic Methods
-  - Also called Dunder (or double underscore) methods, magic methods are special types of functions that are invoked internally.
-  - They start and end with double underscores.
-  - Some examples include __add__(), __abs__(), __round__(), __floor__(), __str__(), __trunc__(), __lshift__() etc. 
-  - The expression number + 5 is the same as number.__add__(5) and this is internally called by other methods or actions.
-  - You can directly use these functions as it will decrease the run time of your code due to the fact that now due to direct use, we will be reducing a function call each time.
-
-Descriptors : https://www.geeksforgeeks.org/descriptor-in-python/
- 
-Singleton in python : https://www.geeksforgeeks.org/singleton-method-python-design-patterns/
-
-Monkey patching is changing the behaviour of a function or object after it has already been defined.
-
-What is the Python “with” statement designed for?
-  - The `with` statement is used for exception handling to make code cleaner and simpler.
+Q: What is the Python "with" statement designed for?
+  - The "with" statement is used for exception handling to make code cleaner and simpler.
   - It is generally used for the management of common resources like creating, editing, and saving a file.
 
 
 
-Python in-built:
-  - What is the range() function and what are its parameters? range([start], stop[, step])
-  - PEP or Python Enhancement Proposal is a set of rules that specify how to format Python code for maximum readability.
-  - Shallow copy and Deep copy
 
 
 
@@ -218,19 +157,7 @@ Python in-built:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Python OOP Questions:
----------------------
+------------------------------------------- Python OOPs
 Class
   - It is a complex but logical data type defined with a unique state and behavior
 
@@ -239,35 +166,123 @@ Object
 
 Inheritance
   - Inheritance is the capability of one class to derive or inherit the properties from another class.
-  - Types of Inheritance
-      1] Single Inheritance:
-          Single-level inheritance enables a derived class to inherit characteristics from a single-parent class.
 
-      2] Multilevel Inheritance:
-          Multi-level inheritance enables a derived class to inherit properties from an immediate parent class which in turn inherits properties from his parent class.
 
-      3] Hierarchical Inheritance:
-          Hierarchical level inheritance enables more than one derived class to inherit properties from a parent class.
+Q: What is the use of "self" in Python?
+  - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. 
 
-      4] Multiple Inheritance:
-          Multiple level inheritance enables one derived class to inherit properties from more than one base class.
 
-The self
-  - self represents the instance of the class.
-  - By using the “self”  we can access the attributes and methods of the class in python.
+Q: What is __init__ ?
+  - __init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created.
 
-The __init__ method : https://www.geeksforgeeks.org/__init__-in-python/
-  - This method acts as a constructor for class
-  - It is run as soon as an object of a class is instantiated
-  
-The __del__ method : 
+
+Q: What is __del__ ? 
   - This methods acts as a destructor for class
   - It is run at the end of the program or as soon as we perform >> del obj
 
-What is Class Method in Python? 
-  - A class method is a method that is bound to the class and not the object of the class.
-  - They have the access to the state of the class as it takes a class parameter that points to the class and not the object instance.
-  - It can modify a class state that would apply across all the instances of the class. For example, it can modify a class variable that will be applicable to all the instances.
+
+Q: What are First Class Objects?
+  - In Python, functions are first class objects which means that functions in Python can be used or passed as arguments.
+  - Properties of first class functions:
+      1) A function is an instance of the Object type.
+      2) You can store the function in a variable.
+      3) You can pass the function as a parameter to another function.
+      4) You can return the function from a function.
+      5) You can store them in data structures such as hash tables, lists, etc.
+
+
+Q: What are Magic methods or Dunder (or double underscore) methods?
+  - Magic methods are special types of functions that are invoked internally.
+  - They start and end with double underscores.
+  - Some examples include __add__(), __abs__(), __round__(), __floor__(), __str__(), __trunc__(), __lshift__() etc.
+  - The expression number + 5 is the same as number.__add__(5) and this is internally called by other methods or actions.
+  - You can directly use these functions as it will decrease the run time of your code due to the fact that now due to direct use, we will be reducing a function call each time.
+
+
+Q: Type of inheritance in python.
+  - Python supports following type of inheritance:
+    1) Single Inheritance: Child class derives members of one parent class.
+    2) Multi-level Inheritance: A --> B --> C. A is the grandfather class of class C.
+    3) Multiple Inheritance: This is achieved when one child class derives members from more than one parent class.
+    4) Hierarchical Inheritance: When a parent class is derived by more than one child class
+
+
+**Q: What is diamond problem in python inheritance? or Method Resolution Order in Python Inheritance?
+  - Method resolution order in Python is the order in which a python program resolves or searches for a class in case of multiple inheritance.
+  - Important points to be noted
+    1) It play's a crucial role for programs using multi-inheritance.
+    2) In multi-inheritance a class is derived from more than one base class, hence inheriting all properties of the base class.
+    3) In this approach -> the method or attributes are first searched in the base class. If it is not present then the seraching moves a level up -- to the immediate parent class. And if again no luck, then the searching continues following the same search approach.
+    4) It follows the depth-first search approach.
+        + Now let us understand this through an example: Diamond Inheritance
+            >> Diamond Inheritance refers to an ambiguity that arises when two classes i.e. B and C inherit from a superclass A and class D inherits from both class B and C. 
+            >> Now, suppose there is a method “demo” which is an overridden method in one of Class B and Class C or both then the ambiguity arises which of the method “demo” Class D should inherit.
+            >> The problem is solved in a depth first search fashion. In this code the order of execution will be : class D -> class B -> class C -> class A
+            >> Since, the class D will find the method demo() instantly in class B so will execute class B's method and will not search in other classes.
+            >> class D(A,B,C) , It is a clear violation, because D cannot start finding the method from A and eventually go to B then C; Then definitely, we will get the error TypeError: Cannot create a consistent method resolution order (MRO) for bases A, B, C
+            >> class D(B,C,A) , This will work and call demo method from class B.
+
+
+Q: Descriptors : https://www.geeksforgeeks.org/descriptor-in-python/
+ 
+
+Q: How do you access parent members in the child class?
+  1) By using Parent class name. You can use the name of the parent class to access the attributes as shown in the example below:
+    class Parent(object):
+       def __init__(self, name):
+           self.name = name    
+     
+    class Child(Parent): 
+       def __init__(self, name, age):
+           Parent.name = name      # access using parent class
+           self.age = age
+     
+       def display(self):
+           print(Parent.name, self.age)  # access using parent class
+     
+    # Driver Code
+    obj = Child("Interviewbit", 6)
+    obj.display()
+
+  2) By using super(). The parent class members can be accessed in child class using the super keyword.
+    class Parent(object):
+       def __init__(self, name):
+           self.name = name    
+     
+    class Child(Parent):
+       def __init__(self, name, age):         
+           ''' 
+             In Python 3.x, we can also use super().__init__(name)
+           ''' 
+           super(Child, self).__init__(name)
+           self.age = age
+     
+       def display(self):
+          # Note that Parent.name cant be used 
+          # here since super() is used in the constructor
+          print(self.name, self.age)
+      
+    # Driver Code
+    obj = Child("Interviewbit", 6)
+    obj.display()
+
+
+Q: How will you check if a class is a child of another class?
+  - This is done by using a method called issubclass() provided by python. The method tells us if any class is a child of another class by returning true or false accordingly.
+  # Driver Code
+  print(issubclass(Child, Parent))    #True
+  print(issubclass(Parent, Child))    #False
+
+
+Q: Singleton in python : https://www.geeksforgeeks.org/singleton-method-python-design-patterns/
+
+
+Q: Monkey patching is changing the behaviour of a function or object after it has already been defined.
+
+
+
+
+
 
 What is the Static Method in Python?
   - A static method does not receive an implicit first argument.
@@ -276,6 +291,16 @@ What is the Static Method in Python?
   - It is present in a class because it makes sense for the method to be present in class.
 
 @classmethod, @staticmethod, @property?
+
+
+
+
+
+
+
+
+
+
 
 -----------------------
 Python Coding Programs:
