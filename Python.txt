@@ -148,6 +148,12 @@ Q: What is the Python "with" statement designed for?
   - It is generally used for the management of common resources like creating, editing, and saving a file.
 
 
+Statment: With Python 3.6 there is a new convenience notation for big numbers introduced which allows you to divide groups of digits in the number literal so that it is easier to read them.
+  a = 1_00_00  # you do not need to group digits by 3!
+  b = 0xbad_c0ffee  # you can make fun with hex digit notation
+  c = 0b0101_01010101010_0100  # works with binary notation
+  f = 1_000_00.0
+
 
 
 
