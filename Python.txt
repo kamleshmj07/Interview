@@ -109,7 +109,7 @@ Q: What are generators in Python?
 Q: What is the difference between .py and .pyc files?
   - .py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program. We get bytecode after compilation of .py file (source code). .pyc files are not created for all the files that you run. It is only created for the files that you import.
   - Before executing a python program python interpreter checks for the compiled files. If the file is present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles it to .pyc file and then python virtual machine executes it.
-Having .pyc file saves you the compilation time
+  - Having .pyc file saves you the compilation time
 
 
 Statement: In Python, arguments are passed by reference, i.e., reference to the actual object is passed.
@@ -155,8 +155,26 @@ Statment: With Python 3.6 there is a new convenience notation for big numbers in
   f = 1_000_00.0
 
 
+Q: What is map, filter and reduce?
+  - map(function, sequence) : It recieves a function and a sequence then returns a list containing the results obtained by calling that function passing it each item of that sequence.
+  - filter(function, sequence) : It recieves a function testing value based on condition and a sequence then returns list of values for which the boolean value returned from the function is true.
+  - reduce(function, sequence) : It recieves a function and a sequence then returns a value obtained by combining the items of the sequence using that function.
 
 
+Q: What are python collections?
+  1) Counter:
+    - Counter is an unordered collection where elements are stored as Dict keys and their count as dict value.
+    - Counter elements count can be positive, zero or negative integers. However there is no restriction on it’s keys and values.
+    - Although values are intended to be numbers but we can store other objects too.
+    - More on:
+        >> https://realpython.com/python-counter/
+        >> https://www.digitalocean.com/community/tutorials/python-counter-python-collections-counter
+
+  2) Deque:
+    - Python’s deque is a low-level and highly optimized double-ended queue that’s useful for implementing elegant, efficient, and Pythonic queues and stacks, which are the most common list-like data types in computing.
+    - In Python list the pop and append items on their left end are not fast enough.
+    - Python’s collections module provides a class called deque that’s specially designed to provide fast and memory-efficient ways to append and pop item from both ends of the underlying data structure
+    - More on: https://realpython.com/python-deque/
 
 
 
