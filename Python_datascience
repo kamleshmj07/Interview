@@ -1,3 +1,20 @@
 ----------------------------------------------------- Python pandas
 
-Q: 
+Q: What do you know about pandas?
+  - Pandas is an open-source, python-based library used in data manipulation applications requiring high performance.
+  - The name is derived from “Panel Data” having multidimensional data. 
+  - Pandas are useful in performing 5 major steps of data analysis
+      1) Load the data, clean/manipulate it, prepare it, model it, and analyze the data.
+
+
+Q: How will you combine different pandas dataframes?
+  - The dataframes can be combines using the below approaches:
+      1) append() method: This is used to stack the dataframes horizontally. 
+          df1.append(df2)
+      2) concat() method: This is used to stack dataframes vertically. This is best used when the dataframes have the same columns and similar fields.
+          pd.concat([df1, df2])
+      3) join() method: This is used for extracting data from various dataframes having one or more common columns.
+          df1.join(df2)
+
+
+Q: isnull() and isna() methods
