@@ -1,0 +1,217 @@
+----------------------------------------------- Python django
+
+Q: What is django?
+  - It is afree and open source python web framework that encourages rapid development and clean design.
+  - It follows the model–template–views architectural pattern.
+  - It is an ORM based framework.
+
+
+Q: Explain request cycle in django.
+  - HTTP request >> urls.py
+  - urls.py >>> forwards request to appropriate view >>> views.py
+  - views.py >>> Views access the data needed to satisfy requests via models, and delegate the formatting of the response to templates >>> shares a html response.
+
+
+Q: Explain the django project directory structure?
+  1) manage.py - A command-line utility that allows you to interact with your Django project
+  2) __init__.py - An empty file that tells Python that the current directory should be considered as a Python package
+  3) settings.py - Comprises the configurations of the current project like DB connections.
+  4) urls.py - All the URLs of the project are present here
+  5) wsgi.py - This is an entry point for your application which is used by the web servers to serve the project you have created.
+
+
+What are models in Django?
+  - A model in Django refers to a class that maps to a database table or database collection.
+  - Each attribute of the Django model class represents a database field. They are defined in app/models.py
+    from django.db import models
+    class SampleModel(models.Model):
+      field1 = models.CharField(max_length = 50)
+      field2 = models.IntegerField()
+      field3 = models.AutoField(primary_key=True)
+      field4 = models.ForeignKey(Musician, on_delete=models.CASCADE)
+
+
+Q: What are templates in Django or Django template language?
+  - Templates are an integral part of the Django MVT architecture.
+  - They generally comprise HTML, CSS, and js in which dynamic variables and information are embedded with the help of views.
+  - Some constructs are recognized and interpreted by the template engine. The main ones are variables and tags.
+  - A template is rendered with a context. Rendering just replaces variables with their values, present in the context, and processes tags. Everything else remains as it is.
+  - The syntax of the Django template language includes the following four constructs:
+      Variables
+      Tags
+      Filters
+      Comments
+
+
+Q: What are views in Django?
+  - A view function, or "view" for short, is simply a Python function that takes a web request and returns a web response.
+  - This response can be HTML contents of a web page, or a redirect, or a 404 error, or an XML document, or an image, etc.
+  - There are two types of views:
+    1) Function-Based Views: In this, we import our view as a function.
+    2) Class-based Views: It's an object-oriented approach.
+
+
+Q: What is Django ORM?
+  - This ORM (an acronym for Object Relational Mapper) enables us to interact with databases.
+  - We can avoid writing raw queries, it is possible to retrieve, save, delete and perform other operations over the database.
+  - It works as an abstraction layer between the models and the database.
+
+
+Q: What is Django Rest Framework (DRF)?
+  - Django Rest Framework is an open-source framework based upon Django which lets you create RESTful APIs rapidly.
+
+Q: What is django-admin and manage.py and explain its commands?
+  - django-admin is Django's command-line utility for administrative tasks.
+  - In addition to this, a manage.py file is also automatically created in each Django project.
+    + Not only does it perform the same purpose as the django-admin but it also sets the DJANGO_SETTINGS_MODULE environment variable to point to the project's settings.py file.
+
+  >> Other commands are as follows:
+      django-admin help - used to display usage information and a list of the commands provided by each application.
+      django-admin version - used to check your Django version.
+      django-admin check - used to inspect the entire Django project for common problems.
+      django-admin compilemessages - Compiles .po files created by makemessages to .mo files for use with the help of built-in gettext support.
+      django-admin createcachetable - Creates the cache tables for use in the database cache backend.
+      django-admin dbshell - Runs the command-line client for the database engine specified in your ENGINE setting(s), with the connection parameters (USER, PASSWORD, DB_NAME, USER etc.) specified settings file.
+      django-admin diffsettings - Shows the difference between the existing settings file and Django’s default settings.
+      django-admin dumpdata - Used to the dumpdata from the database.
+      django-admin flush - Flush all values from the database and also re-executes any post-synchronization handlers specified in the code.
+      django-admin inspectdb - It generates django models from the existing database tables.
+      django-admin loaddata - loads the data into the database from the fixture file.
+      django-admin makemessages - Used for translation purpose and it generates a message file too.
+      django-admin makemigrations - Generates new migrations as per the changes detected to your models.
+      django-admin migrate - Executes SQL commands after which the database state with the current set of models and migrations are synchronized.
+      django-admin runserver - Starts a light-weight Web server on the local machine for development. The default server runs on port 8000 on the IP address 127.0.0.1. You can pass a custom IP address and port number explicitly if you want.
+      django-admin sendtestemail - This is used to confirm email sending through Django is working by sending a test email to the recipient(s) specified.
+      django-admin shell - Starts the Python interactive interpreter.
+      django-admin showmigrations - Shows all migrations present in the project.
+      django-admin sqlflush - Prints the SQL statements that would be executed for the flush command mentioned above.
+      django-admin sqlmigrate - Prints the SQL statement for the named migration.
+      django-admin sqlsequencereset - output the SQL queries for resetting sequences for the given app name(s).
+      django-admin squashmigrations - Squashes a range of migrations for a particular app_label.
+      django-admin startapp - Creates a new Django app for the given app name within the current directory or at the given destination.
+      django-admin startproject - Creates a new Django project directory structure for the given project name within the current directory or at the given destination.
+      django-admin test - Runs tests for all installed apps.
+      django-admin testserver - Runs a Django development server (which is also executed via the runserver command) using data from the given fixture(s).
+      django-admin changepassword - offers a method to change the user's password.
+      django-admin createsuperuser - Creates a user account with all permissions(also known as superuser account).
+      django-admin remove_stale_contenttypes - removes stale content types (from deleted models) in your database.
+      django-admin clearsessions - Can be used to clean out expired sessions or as a cron job
+
+
+Q: What is Jinja templating?
+  - Jinja Templating is a very popular templating engine for Python, the latest version is Jinja2.
+  - Some of its features are:
+      + Sandbox Execution - This is a sandbox (or a protected) framework for automating the testing process
+      + HTML Escaping - It provides automatic HTML Escaping as <, >, & characters have special values in templates and if using a regular text, these symbols can lead to XSS Attacks which Jinja deals with automatically.
+      + Template Inheritance
+      + Generates HTML templates much faster than default engine
+      + Easier to debug as compared to the default engine
+
+
+Q: What are different model inheritance styles in the Django?
+  - Abstract Base Class Inheritance: Used when you only need the parent class to hold information that you don't want to write for each child model.
+  - Multi-Table Model Inheritance: Used when you are subclassing an existing model and need each model to have its own table in the database.
+  - Proxy Model Inheritance: Used when you want to retain the model's field while altering the python level functioning of the model.
+
+
+Q: What are Django Signals?
+  - Whenever there is a modification in a model, we may need to trigger some actions. 
+  - Django provides an elegant way to handle these in the form of signals. 
+    The signals are the utilities that allow us to associate events with actions.
+    We can implement these by developing a function that will run when a signal calls it.
+  - List of built-in signals in the models:
+    1) django.db.models.pre_init & django.db.models.post_init
+      + Sent before or after a models's _init_() method is called
+    2) django.db.models.signals.pre_save & django.db.models.signals.post_save
+      + Sent before or after a model's save() method is called
+    3) django.db.models.signals.pre_delete & django.db.models.signals.post_delete
+      + Sent before or after a model's delete() method or queryset delete() method is called
+    4) django.db.models.signals.m2m_changed
+      + Sent when a ManyToManyField is changed
+    5) django.core.signals.request_started & django.core.signals.request_finished
+      + Sent when an HTTP request is started or finished
+
+
+Q: Explain the caching strategies in the Django?
+  - Caching refers to the technique of storing the output results when they are processed initially so that next time when the same results are fetched again, instead of processing again those already stored results can be used, which leads to faster accessing as well us less resource utilization.
+  - Django provides us with a robust cache system that is able to store dynamic web pages so that these pages don't need to be evaluated again for each request.
+  - Some of the caching strategies in Django are listed below:
+    1) Memcached: A memory-based cache server is the fastest and most efficient
+    2) FileSystem Caching: Values of the cache are stored as separate files in a serialized order.
+    3) Local-memory Caching: This is used as the default cache strategy by Django if you haven't set anything. It is per-process as well as thread-safe.
+    4) Database Caching: Cache data will be stored in the database and works very well if you have a fast and well-indexed DB server.
+
+
+**Q: Explain user authentication in Django?
+  - Django comes with a built-in user authentication system, which handles objects like users, groups, user-permissions, and few cookie-based user sessions.
+  - Django User authentication not only authenticates the user but also authorizes him.
+  - The system consists and operates on these objects:
+      Users
+      Permissions
+      Groups
+      Password Hashing System
+      Forms Validation
+      A pluggable backend system
+
+
+Q: How to view all items in the Model?
+    ModelName.objects.all()
+
+
+Q: How to filter items in the Model?
+    ModelName.objects.filter(field_name="term")
+
+
+Q: How to get a particular item in the Model?
+    ModelName.objects.get(id=”term”)
+    Note: If there are no results that match the query, get() will raise a DoesNotExist exception.
+          If more than one item matches the given get() query.
+          In this case, it’ll raise MultipleObjectsReturned, which is also an attribute of the model class itself.
+
+
+Q: How to obtain the SQL query from the queryset?
+    print(queryset.query)
+
+
+Q: Explain Q objects in Django ORM?
+  - Q objects are used to write complex queries, as in filter() functions just 'AND' the conditions while if you want to 'OR' the conditions you can use Q objects.
+
+
+Q: Default port for the Django development server? 8000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Q: Difference between Django OneToOneField and ForeignKey Field?
+  - Both of them are of the most common types of fields used in Django.
+  - The only difference between these two is that ForeignKey field consists of on_delete option along with a model's class because it's used for many-to-one relationships while on the other hand, the OneToOneField, only carries out a one-to-one relationship and requires only the model's class.
+
+
+What is mixin?
+What is Django Field Class?
+Why is permanent redirection not a good option?
+How can you combine multiple QuerySets in a View?
+  Initially, Concatenating QuerySets into lists is believed to be the easiest approach. Here’s an example of how to do that:
+  from itertools import chain
+  result_list = list(chain(model1_list, model2_list, model3_list))
+Difference between select_related and prefetch_related?  
+
+
+
+
+
+
+
+
+
+
