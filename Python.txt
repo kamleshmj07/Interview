@@ -18,7 +18,7 @@ Q: What are lists and tuples? What is the key difference between the two?
   - Lists and Tuples are both sequence data types that can store a collection of objects in Python.
   - The objects stored in both sequences can have different data types. 
       1) Lists are represented with square brackets ['sara', 6, 0.19], while tuples are represented with parantheses ('ansh', 5, 0.97).
-  - The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner. 
+  - The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner.
 
 
 Statement: Python provides type() and isinstance() functions to check the type of variables.
@@ -49,13 +49,12 @@ Q: How is memory managed in Python?
 
 
 Q: What are decorators in Python?
-  - Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. 
+  - By definition, a decorator is a function that takes another function and extends the behavior of the latter function without explicitly modifying it. 
   - They are represented the @decorator_name in Python and are called in a bottom-up fashion.
   - Decorators are a part of Python’s metaprogramming which are used to add additional functionality to existing code without altering the original structure at compile time. 
   - In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
-  - https://www.codementor.io/@sheena/advanced-use-python-decorators-class-function-du107nxsv
+  - Python also has a few built in decorators that are worth knowing about, for example @staticmethod and @classmethod
   - https://realpython.com/primer-on-python-decorators/
-  - https://www.geeksforgeeks.org/decorators-in-python/
 
 
 Q: What are Dict and List comprehensions?
@@ -360,7 +359,7 @@ https://www.codementor.io/@sheena/essential-python-interview-questions-du107ozr6
 -------------------------------------------------------------------------
 https://www.toptal.com/python/interview-questions
 -------------------------------------------------------------------------
-
+https://docs.python.org/3/library/functools.html
 -------------------------------------------------------------------------
 
 -------------------------------------------------------------------------
