@@ -248,7 +248,7 @@ Q: Type of inheritance in python.
             >> class D(B,C,A) , This will work and call demo method from class B.
 
 
-Q: Descriptors : https://www.geeksforgeeks.org/descriptor-in-python/
+Q: Descriptors : https://realpython.com/python-descriptors/#what-are-python-descriptors
  
 
 Q: How do you access parent members in the child class?
