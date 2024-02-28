@@ -81,6 +81,7 @@ Q: How do you copy an object in Python?
   - Moreover, there are two ways of creating copies for the given object using the copy module:
     1) Shallow Copy is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values is a reference to other objects, just the reference addresses for the same are copied.
     2) Deep Copy copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.
+  - References: https://www.youtube.com/watch?v=Ezbitv-1paU
 
 
 Q: What is pickling and unpickling?
