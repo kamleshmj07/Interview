@@ -159,6 +159,7 @@ Q: What is map, filter and reduce?
   - map(function, sequence) : It recieves a function and a sequence then returns a list containing the results obtained by calling that function passing it each item of that sequence.
   - filter(function, sequence) : It recieves a function testing value based on condition and a sequence then returns list of values for which the boolean value returned from the function is true.
   - reduce(function, sequence) : It recieves a function and a sequence then returns a value obtained by combining the items of the sequence using that function.
+  - References: https://www.youtube.com/watch?v=cKlnR-CB3tk
 
 
 Q: What are python collections?
