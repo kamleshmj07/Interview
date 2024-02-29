@@ -299,12 +299,12 @@ Q: How will you check if a class is a child of another class?
   print(issubclass(Parent, Child))    #False
 
 
-Q: Singleton in python : https://www.geeksforgeeks.org/singleton-method-python-design-patterns/
+Q: Singleton in python:
+  - https://stackoverflow.com/questions/6760685/what-is-the-best-way-of-implementing-singleton-in-python
+  - https://refactoring.guru/design-patterns/singleton/python/example
 
 
 Q: Monkey patching is changing the behaviour of a function or object after it has already been defined.
-
-
 
 
 What is the static variable and static method in Python?
