@@ -307,13 +307,15 @@ Q: Monkey patching is changing the behaviour of a function or object after it ha
 
 
 
+What is the static variable and static method in Python?
+  - References:
+    + https://www.scaler.com/topics/static-variable-in-python/
+    + https://www.scaler.com/topics/static-method-in-python/
 
 
-What is the Static Method in Python?
-  - A static method does not receive an implicit first argument.
-  - A static method is also a method that is bound to the class and not the object of the class.
-  - This method can’t access or modify the class state.
-  - It is present in a class because it makes sense for the method to be present in class.
+
+
+
 
 @classmethod, @staticmethod, @property?
 
