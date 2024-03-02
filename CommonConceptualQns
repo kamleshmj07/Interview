@@ -1,3 +1,56 @@
+----------------------------------------------------- 
+What is data engineering?
+  - Development, implementation and maintainence of processes and systems to consume the raw data and provide high quality consistent information for downstream use cases.
+
+Architecture v/s Framework
+  - Framework is a pre-built set of code libraries that developers can use to build applications more efficiently.
+  - Architecture consists of the guiding principles behind a given application. It is not strongly tied to a particular framework or library. It may define different components and their boundaries of functionality. 
+
+What is FastAPI?
+  - 
+
+What is microservices architecture?
+  - We group the various services logically based on simple routing mechanism and then host them separately for the application to consume the services.
+
+What is docker?
+  - Docker packages, provisions and runs containers.
+  - Container technology is available through the operating system: A container packages the application service or function with all of the libraries, configuration files, dependencies and other necessary parts and parameters to operate.
+  - Docker images contain all the dependencies needed to execute code inside a container.
+  - Advantages:
+      1] A high degree of portability so users can register and share containers over various hosts.
+      2] Lower resource use.
+      3] Faster deployment compared to VMs.
+
+
+What is CI/CD?
+  - CI/CD is a best practice for devops and agile development.
+  - Jenkins is a tool that enables the automation of the CI/CD process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ----------------------------------------------------- Object-Oriented Programming (OOP):
 What are the four principles of OOP? Can you explain each one?
 Describe the difference between encapsulation and abstraction.
@@ -34,17 +87,6 @@ Describe the difference between processes and threads.
 Explain the concept of thread safety and provide examples of techniques to achieve it.
 What is a deadlock, and how can it be prevented in multithreaded applications?
 
-
------------------------------------------------------ 
-What is data engineering?
-  - Development, implementation and maintainence of processes and systems to consume the raw data and provide high quality consistent information for downstream use cases.
-
-Architecture v/s Framework
-  - Framework is a pre-built set of code libraries that developers can use to build applications more efficiently.
-  - Architecture consists of the guiding principles behind a given application. It is not strongly tied to a particular framework or library. It may define different components and their boundaries of functionality. 
-
-What is FastAPI?
-  - 
 
 ----------------------------------------------------- 
 ----------------------------------------------------- 
