@@ -1,0 +1,46 @@
+----------------------------------------------------- Object-Oriented Programming (OOP):
+What are the four principles of OOP? Can you explain each one?
+Describe the difference between encapsulation and abstraction.
+Explain the concept of inheritance and provide an example of its use in programming.
+What is polymorphism, and how is it implemented in programming languages?
+
+
+----------------------------------------------------- Software Design:
+What is the SOLID principle in software design? Can you explain each of its components?
+Describe the difference between procedural programming and object-oriented programming.
+Explain the concept of design patterns and provide examples of commonly used design patterns.
+What is the MVC (Model-View-Controller) architecture, and how does it facilitate software development?
+
+
+----------------------------------------------------- Databases:
+
+What is normalization in database design? Why is it important?
+Explain the difference between SQL and NoSQL databases. Provide examples of each.
+Describe the ACID properties of database transactions.
+What is indexing in databases, and how does it improve query performance?
+
+
+----------------------------------------------------- Networking:
+
+What is the OSI model, and how does it relate to networking protocols?
+Explain the difference between TCP and UDP protocols. When would you use one over the other?
+Describe the concept of IP addressing and subnetting.
+What is HTTP, and how does it facilitate communication between web servers and clients?
+
+
+----------------------------------------------------- Concurrency and Multithreading:
+What is concurrency, and why is it important in modern software development?
+Describe the difference between processes and threads.
+Explain the concept of thread safety and provide examples of techniques to achieve it.
+What is a deadlock, and how can it be prevented in multithreaded applications?
+
+
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
+----------------------------------------------------- 
