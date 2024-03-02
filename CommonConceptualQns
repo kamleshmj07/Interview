@@ -36,6 +36,16 @@ What is a deadlock, and how can it be prevented in multithreaded applications?
 
 
 ----------------------------------------------------- 
+What is data engineering?
+  - Development, implementation and maintainence of processes and systems to consume the raw data and provide high quality consistent information for downstream use cases.
+
+Architecture v/s Framework
+  - Framework is a pre-built set of code libraries that developers can use to build applications more efficiently.
+  - Architecture consists of the guiding principles behind a given application. It is not strongly tied to a particular framework or library. It may define different components and their boundaries of functionality. 
+
+What is FastAPI?
+  - 
+
 ----------------------------------------------------- 
 ----------------------------------------------------- 
 ----------------------------------------------------- 
