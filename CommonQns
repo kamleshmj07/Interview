@@ -30,7 +30,11 @@ Describe a challenging technical problem you faced in a previous role and how yo
       + Refactoring is needed to enable componentization which will allow us to repackage our modules in a way where we can collaborate with different softwares.
 
 
-
+Describe a people management challenge
+  - Reduce in collaboration and productivity among couple of team members due to different working styles.
+      + To solve had to do pair programming remotely and establish guidelines
+  - Motivating team members
+      + Conduct one on one sessions. Appreciate efforts when necessary during team discussions.
 
 
 --------------------------------------------------------------- Product & Task Management
@@ -55,7 +59,11 @@ How do you prioritize tasks and allocate resources in a software development pro
 
 
 How do you communicate technical concepts and project status updates to non-technical stakeholders?
-  - Translate and maintain a brief periodic project status report
+  - Assess the audience based on area of expertise and technical knowledge.
+  - Translate technical jargons and use analogies.
+  - Maintain and share a brief periodic project status report based on agreed upon template.
+
+
 
 
 Can you discuss a time when you had to bridge communication gaps between technical and non-technical team members?
