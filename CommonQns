@@ -1,3 +1,4 @@
+--------------------------------------------------------------- Experience
 Tell us about yourself:
   - I have completed my engineering at mumbai university and postgraduate diploma with cdac.
   - Total work experience is 10 years. I'm currently working as a lead software engineer with finalyca technologies ltd. 
@@ -20,6 +21,19 @@ Day to day activity or Roles and Responsibilities:
   - Individual contribution
 
 
+Describe a challenging technical problem you faced in a previous role and how you resolved it.
+  - Linedata >> SEG Research Dashboard and Portfolio Monitor App
+      + Live feed implementation for dashboard positions.
+      + Amongst all the options from GraphQL, Websockets, we ended up implementing a much simpler approach after understanding the use case. Saving effort cost and delivering before time.
+  - Finalyca: 
+      + On premise installation for an internal module/API to avoid sharing the user data.
+      + Refactoring is needed to enable componentization which will allow us to repackage our modules in a way where we can collaborate with different softwares.
+
+
+
+
+
+--------------------------------------------------------------- Product & Task Management
 What are the steps to build a product?
   - Conduct group or individual meetings with stakeholders to collaborate and understand project goals, scope, and desired outcomes.
   - Analyze and identify key features, functionalities, and constraints.
@@ -28,15 +42,24 @@ What are the steps to build a product?
   - Take weekly or biweekly followups/feedbacks and implement the feedback for continous evolution of the product.
 
 
+How do you prioritize tasks and allocate resources in a software development project?
+  - Setup a biweekly/monthly sprint for planning deliverables.
+  - Step 1] To prioritize your product backlog along with new requests/issues.
+    Step 2] Start to assess the business value of each item along with ballpark estimate.
+            + High user impact with high business value plus it aligns with realistic development estimate  then >> Highest Priority
+            + Must have (essential) >>> Should have (need to have but not essential) >>> Could have (nice to have) >>> Won't have ()
+    Step 3] Assess the bandwidth of team, based on skillset and priority assign the tasks.
+            + Set clear goals
+            + Plan considering the dependencies within the team
+            + Conduct quick short daily standups, obtain inputs and provide direction if necessary.
+
+
 How do you communicate technical concepts and project status updates to non-technical stakeholders?
   - Translate and maintain a brief periodic project status report
 
 
 Can you discuss a time when you had to bridge communication gaps between technical and non-technical team members?
 How do you facilitate knowledge sharing and cross-functional collaboration within your team?
-How do you prioritize tasks and allocate resources in a software development project?
-Describe a challenging technical problem you faced in a previous role and how you resolved it.
-  - live feed
 
 
 
