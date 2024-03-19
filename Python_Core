@@ -320,7 +320,7 @@ What is the static variable and static method in Python?
 @classmethod, @staticmethod, @property?
 
 
-
+Q: Multi processing in python.
 
 
 
@@ -358,6 +358,26 @@ print(x.next())
 print("\nUsing for in loop")
 for i in fib(5): 
     print(i)
+
+#------------------------------ Datametica Interview - Reverse vowel sequence in a word in efficient way
+Example: Practice >> Prectica
+
+#------------------------------ Unify Technologies Interview - Combine the overlapping intervals in the sequence of intervals
+Example: [[1,3],[2,6],[8,10],[15,18]] >> [[1,6],[8,10],[15,18]]
+
+
+
+
+
+
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
 -------------------------------------------------------------------------
 https://www.codementor.io/@sheena/essential-python-interview-questions-du107ozr6
 -------------------------------------------------------------------------
