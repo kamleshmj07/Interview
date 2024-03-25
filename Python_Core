@@ -195,6 +195,7 @@ Object
 Inheritance
   - Inheritance is the capability of one class to derive or inherit the properties from another class.
 
+Q: Share some of your implementation of OOPs concepts
 
 Q: What is the use of "self" in Python?
   - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. 
@@ -320,10 +321,10 @@ What is the static variable and static method in Python?
 
 
 
-@classmethod, @staticmethod, @property?
-
-
-Q: Multi processing in python.
+Q: @classmethod, @staticmethod, @property?
+Q: Multi-processing in python related questions.
+Q: I/O File operations in python related questions.
+Q: 
 
 
 
