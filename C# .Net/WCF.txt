@@ -187,12 +187,63 @@
 	  RealeaseInstanceMode.BeforeCall
 	  RealeaseInstanceMode.AfterCall
 	  RealeaseInstanceMode.BeforeAndAfterCall
-	  
->> 
+
+>> From file WCF_prep.txt
+SOA
+Services : 	Independent Business Functionality
+	Able to explain themselves
+	Centalized Respoitory/Hosting
+Messages : Std. XML , SOAP(MSWebservice)
++ Loose Coupling
++ Descirbe and Discover
++ Interoperablitiy
+
+WCF
+[ServiceContract] => Interface
+[OperationContract] => Method
+[DataContract] => Exposed Datatype used
+[DataMember] => Member of Exposed Datatype
+
+Endpoints ?
+Rules for Communication with service
+A - Url pointing to the service
+B - Protocol used : Soap over Http / Binary over Tcp
+C - Contract name
+
+Bindings ?
+WsHttpBinding
+BasicHttpBinding : Soap over Http / Https
+NetTcpBinding : Tcp
+
+<system.serviceModel>
+    <services>
+      <service name="WcfServiceAppDemo.TimeService">
+        <endpoint contract="WcfServiceAppDemo.ITimeService" binding="wsHttpBinding" address=""></endpoint>
+      </service>
+    </services>
+</system.serviceModel>
+
+<system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ITimeService" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:1134/TimeService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_ITimeService" contract="TimeServiceReference.ITimeService"
+                name="BasicHttpBinding_ITimeService" />
+        </client>
+</system.serviceModel>
 
 
-Additional Qns
---------------	
+
+
+
+
+
+Additional Qns:
+================
 Transaction Propogation in WCF ?
 Concurency in WCF ?
 IModelBinder is present in 2 different namespace, Why ?
@@ -207,8 +258,8 @@ Azure Service Bus :
 
 
 
-Articles :
-==========
+Good reads:
+============
 http://www.wcftutorial.net/
 Programming WCF Services,4th Edition.pdf 
 	>> Chapter 1 : WCF Essentials >> Page 14 >> The Web.Config File

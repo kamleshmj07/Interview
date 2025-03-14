@@ -1,0 +1,60 @@
+Role
+Responsibilities
+Types of inheritance
+Dynamic programming
+Abstract vs Interface
+Coin Array and Total amount puzzle
+Python vs C#
+Linear Regression Model
+How to value a stock?
+Strategies to value a stock?
+
+
+
+Coding Question:
+
+import pandas as pd
+
+lst_data = [
+  {
+    "UserId": 1, "Date": "01-01-2022" ,"SecurityId": "IBM", "Units" : 100
+  },
+  {
+    "UserId": 1, "Date": "01-01-2022" ,"SecurityId": "GOOGL", "Units" : 100
+  },
+  {
+    "UserId": 2, "Date": "01-01-2022" ,"SecurityId": "IBM", "Units" : 300
+  },
+  {
+    "UserId": 1, "Date": "01-02-2022" ,"SecurityId": "AAPL", "Units" : 100
+  },
+  {
+    "UserId": 2, "Date": "01-02-2022" ,"SecurityId": "META", "Units" : 100
+  },
+  {
+    "UserId": 2, "Date": "01-02-2022" ,"SecurityId": "IBM", "Units" : 100
+  },
+  {
+    "UserId": 3, "Date": "01-03-2022" ,"SecurityId": "IBM", "Units" : 100
+  },
+  {
+    "UserId": 4, "Date": "01-03-2022" ,"SecurityId": "GOOGL", "Units" : 100
+  },
+  {
+    "UserId": 4, "Date": "01-03-2022" ,"SecurityId": "IBM", "Units" : 100
+  }       
+]
+
+
+df = pd.DataFrame(lst_data)
+
+print(df)
+
+df_final = df[df.groupby(by="Date").count()]
+
+print('\n')
+
+print(df.groupby(by=["Date", "UserId"]).count().sort_values("SecurityId").groupby(level=0).tail(1))
+
+
+
