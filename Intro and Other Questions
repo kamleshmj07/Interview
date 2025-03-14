@@ -4,6 +4,12 @@
   - Over the past 11 years, I’ve gained extensive experience in designing scalable data pipelines, optimizing ETL processes, and building robust data architectures using Python, SQL, and few data integration tools.
   - Outside of work, I enjoy investing and exploring new travel destinations.
 
+>> Why looking for a change?
+  - A very limited clarity or roadmap for my growth.
+  - Underutilization of my skills
+  - Lack of mentorship
+  - Complex communication****
+
 >> Roles and Responsibilities based on the projects I have contributed:
   - Designing Scalable Data Models
   - ETL Process Development
@@ -19,6 +25,15 @@
   - Tech Stack Evaluation
   - Backup and Recovery
   - Stakeholder Communication
+
+>> Current Projects:
+  1. EI Reporting - Manufacturing Projects KPI Dashboard:
+    - Built a KPI dashboard using Streamlit and Altair for data visualization, performing EDA and creating interactive insights.
+    - The data modeling was based on JIRA data to track and analyze manufacturing project performance metrics.
+
+  2. Asset Sync & Re-structurization
+    - Currently in requirement gathering stage, plan is to automat the synchronization of asset objects in JIRA for message flows in EDI Systems using Python.
+    - This streamlined asset management will ensure a smooth tracking and handling of the process.
 
 >> Project Summaries (2-liners each):
   1. Finalyca.com - Investment Analytics Platform: 
