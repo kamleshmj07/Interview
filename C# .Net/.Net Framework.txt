@@ -41,7 +41,7 @@
 	  details of the Microsoft rooted namespaces, so be sure to consult the .NET Framework 4.5 SDK
 	  documentation if you are interested.
 	  
->> Open source distributioon of CLI
+>> Open source distribution of CLI
 	- http://www.mono-project.com/ The Mono project targets various Linux distributions (e.g., SuSe, Fedora), Mac OS X, iOS devices (iPad, iPhone), Android devices, and (surprise!) Windows.
 	- http://www.dotgnu.org/ Portable.NET is another open source distribution of the CLI that runs on numerous operating systems (e.g., Windows, AIX, Mac OS X, Solaris, all major Linux distributions).
 	

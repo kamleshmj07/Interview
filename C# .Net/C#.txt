@@ -4,7 +4,7 @@
 	2] Inheritance: How does this language promote code reuse?
 		+ Extend behavior of base type, Aggregation or "has-a" relationship.
 	3] Polymorphism: How does this language let you treat related objects in a similar way? 
-	
+
 >> What is a struct ?
 	- Structure types are well suited for modeling mathematical, geometrical, and other "atomic" entities in your application.
 	- User defined data type, which can have any number of data fields and data members.
@@ -22,7 +22,7 @@
 
 >> What is the difference between a struct and a class in C#?
 	- https://www.c-sharpcorner.com/UploadFile/yougerthen/what-really-make-difference-between-structures-and-classes/		
-	
+
 >> What is a object ?
 	- Instance of a class that resides on a managed heap memory.
 
