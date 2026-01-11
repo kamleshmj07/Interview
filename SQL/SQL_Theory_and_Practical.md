@@ -192,7 +192,9 @@
 
 ### 8. Index Scans vs Index Seeks
 
-**Answer:** An **Index Seek** is efficient; the engine navigates the B-tree to find specific rows. An **Index Scan** is less efficient; the engine reads the entire index structure because it cannot pinpoint the exact location.
+**Answer:**
+- An **Index Seek** is efficient; the engine navigates the B-tree to find specific rows.
+- An **Index Scan** is less efficient; the engine reads the entire index structure because it cannot pinpoint the exact location.
 
 ### 9. Database Sharding vs Partitioning
 
