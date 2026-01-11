@@ -144,26 +144,43 @@
 
 ### 1. What is the difference between DBMS, RDBMS, and NoSQL?
 
-**Answer:** DBMS is a general system for data storage. RDBMS (Relational) uses structured tables with fixed schemas and SQL (e.g., PostgreSQL, SQL Server). NoSQL (Non-relational) offers flexible schemas (Document, Key-Value, Graph) and scales horizontally more easily (e.g., MongoDB, Cassandra).
+**Answer:** 
+- DBMS is a general system for data storage.
+- RDBMS (Relational) uses structured tables with fixed schemas and SQL (e.g., PostgreSQL, SQL Server).
+- NoSQL (Non-relational) offers flexible schemas (Document, Key-Value, Graph) and scales horizontally more easily (e.g., MongoDB, Cassandra).
 
 ### 2. What is the SQL Order of Execution?
 
-**Answer:** The logical order is different from the written order:
-
-1.  `FROM/JOIN` 2. `WHERE` 3. `GROUP BY` 4. `HAVING` 5. `SELECT` 6. `DISTINCT` 7. `ORDER BY` 8. `LIMIT/OFFSET`. Knowing this helps in troubleshooting why an alias created in `SELECT` cannot be used in a `WHERE` clause.
-    
+**Answer:** The logical order is as below:
+1.  `FROM/JOIN`
+2.  `WHERE`
+3.  `GROUP BY`
+4.  `HAVING`
+5.  `SELECT`
+6.  `DISTINCT`
+7.  `ORDER BY`
+8.  `LIMIT/OFFSET`
 
 ### 3. Normalization (1NF to BCNF) & Trade-offs
 
-**Answer:** Normalization reduces redundancy. 1NF (Atomicity), 2NF (No partial dependencies), 3NF (No transitive dependencies), and BCNF (Stronger 3NF). **Senior Note:** Over-normalization can lead to "Join Hell." Strategic Denormalization is often used in read-heavy systems to improve performance.
+**Answer:** Normalization reduces redundancy.
+- 1NF (Atomicity)
+- 2NF (No partial dependencies)
+- 3NF (No transitive dependencies)
+- BCNF (Stronger 3NF).
+**Senior Note:** Over-normalization can lead to "Join Hell." Strategic Denormalization is often used in read-heavy systems to improve performance.
 
 ### 4. ACID vs BASE Properties
 
-**Answer:** **ACID** (Atomicity, Consistency, Isolation, Durability) ensures strict reliability, common in RDBMS. **BASE** (Basically Available, Soft state, Eventual consistency) is used in NoSQL systems like Cassandra to achieve massive high availability.
+**Answer:**
+- **ACID** (Atomicity, Consistency, Isolation, Durability) ensures strict reliability, common in RDBMS.
+- **BASE** (Basically Available, Soft state, Eventual consistency) is used in NoSQL systems like Cassandra to achieve massive high availability.
 
 ### 5. Clustered vs Non-Clustered Indexes
 
-**Answer:** A **Clustered Index** defines the physical storage order of data (only one per table). A **Non-Clustered Index** is a separate structure (like a book index) containing pointers to the data (multiple allowed).
+**Answer:**
+- A **Clustered Index** defines the physical storage order of data (only one per table).
+- A **Non-Clustered Index** is a separate structure (like a book index) containing pointers to the data (multiple allowed).
 
 ### 6. Composite Indexes & Left-Prefix Rule
 
