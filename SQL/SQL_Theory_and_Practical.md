@@ -445,6 +445,71 @@ DELETE FROM DuplicateCTE WHERE RowNum > 1;
 
 ```
 
+### 10. Running Totals (Cumulative Sum)
+
+**Question:** Calculate a running total of revenue by date.
+
+SQL
+
+```
+SELECT SaleDate, Revenue,
+    SUM(Revenue) OVER(ORDER BY SaleDate ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) as CumulativeRevenue
+FROM Sales;
+
+```
+
+### 11. Lead and Lag (Year-over-Year)
+
+**Question:** Show the percentage growth of sales compared to the previous month.
+
+SQL
+
+```
+SELECT Month, Sales,
+    ((Sales - LAG(Sales) OVER(ORDER BY Month)) / LAG(Sales) OVER(ORDER BY Month)) * 100 as Growth
+FROM MonthlySales;
+
+```
+
+### 12. Percentile Calculation (NTILE)
+
+**Question:** Divide employees into 4 salary quartiles.
+
+SQL
+
+```
+SELECT Name, Salary,
+    NTILE(4) OVER(ORDER BY Salary DESC) as Quartile
+FROM Employees;
+
+```
+
+### 13. First/Last Value Functions
+
+**Question:** For each product, show the current price and the price it launched with.
+
+SQL
+
+```
+SELECT ProductName, Price,
+    FIRST_VALUE(Price) OVER(PARTITION BY ProductID ORDER BY EffectiveDate) as LaunchPrice
+FROM PriceHistory;
+
+```
+
+### 14. Moving Averages (Window Frame)
+
+**Question:** Calculate a 7-day moving average of website traffic.
+
+SQL
+
+```
+SELECT LogDate, Visitors,
+    AVG(Visitors) OVER(ORDER BY LogDate ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) as MovingAvg
+FROM TrafficLogs;
+
+```
+
 ### 15. Pivot: Occupations Problem (Dynamic Rows)
 
 **Task:** Sort names alphabetically under their Occupation.
@@ -466,6 +531,105 @@ GROUP BY row_num;
 
 ```
 
+### 15.1 Basic Pivot (Rows to Columns)
+
+**Question:** Rotate `YearlyData` where rows are months and columns are the years 2023, 2024.
+
+SQL
+
+```
+SELECT Month, [2023], [2024]
+FROM (SELECT Year, Month, Revenue FROM YearlyData) AS Source
+PIVOT (SUM(Revenue) FOR Year IN ([2023], [2024])) AS Pvt;
+
+```
+
+### 16. Unpivoting (Columns to Rows)
+
+**Question:** Reverse a table that has columns `Phone1`, `Phone2`, `Phone3` into a single `PhoneNumber` column.
+
+SQL
+
+```
+SELECT UserID, PhoneNum
+FROM UserPhones
+UNPIVOT (PhoneNum FOR PhoneType IN (Phone1, Phone2, Phone3)) AS Unpvt;
+
+```
+
+### 17. Percentage of Total (Partition By)
+
+**Question:** What percentage of total company sales does each region contribute?
+
+SQL
+
+```
+SELECT Region, Sales,
+    (Sales * 100.0 / SUM(Sales) OVER()) as PctOfTotal
+FROM RegionalSales;
+
+```
+
+### 18. Finding Consecutive Days (Gaps and Islands)
+
+**Question:** Find users with a 3-day login streak.
+
+SQL
+
+```
+WITH Groups AS (
+    SELECT UserID, LogDate,
+    DATEADD(day, -ROW_NUMBER() OVER(PARTITION BY UserID ORDER BY LogDate), LogDate) as Grp
+    FROM Logins
+)
+SELECT UserID FROM Groups GROUP BY UserID, Grp HAVING COUNT(*) >= 3;
+
+```
+
+### 19. Partition by Multiple Columns
+
+**Question:** Rank sales within each Country and then within each Category.
+
+SQL
+
+```
+SELECT Country, Category, Amount,
+    RANK() OVER(PARTITION BY Country, Category ORDER BY Amount DESC) as rnk
+FROM GlobalSales;
+
+```
+
+### 20. Difference between ROWS and RANGE
+
+Question: Explain the output difference.
+
+Answer: ROWS is physical (always looks at specific row counts). RANGE is logical (includes all rows with the same value in the ORDER BY clause). If two sales have the exact same timestamp, RANGE includes both in the sum; ROWS might not.
+
+### 21. Email Masking (String Manipulation)
+
+**Question:** Show only the first 2 and last 2 characters of the username in an email.
+
+SQL
+
+```
+SELECT 
+    CONCAT(LEFT(Email, 2), '***', SUBSTRING(Email, CHARINDEX('@', Email)-2, 2), SUBSTRING(Email, CHARINDEX('@', Email), 50))
+FROM Users;
+
+```
+
+### 22. Finding the Last Day of Month
+
+**Question:** Filter for transactions that happened on the last day of the month.
+
+SQL
+
+```
+SELECT * FROM Transactions 
+WHERE TransDate = EOMONTH(TransDate);
+
+```
+
 ### 23. Handling NULLs in Comparisons
 
 **Task:** Select all products where the color is NOT 'Blue'.
@@ -476,6 +640,22 @@ SQL
 -- TRICK: Standard <> will ignore NULLs.
 SELECT * FROM Products 
 WHERE Color <> 'Blue' OR Color IS NULL;
+
+```
+### 24. Recursive CTE for Dates
+
+**Question:** Generate all Mondays in 2024.
+
+SQL
+
+```
+WITH Dates AS (
+    SELECT CAST('2024-01-01' AS DATE) as D
+    UNION ALL
+    SELECT DATEADD(day, 1, D) FROM Dates WHERE D < '2024-12-31'
+)
+SELECT D FROM Dates WHERE DATENAME(weekday, D) = 'Monday'
+OPTION (MAXRECURSION 400);
 
 ```
 
@@ -492,6 +672,35 @@ CROSS APPLY STRING_SPLIT(Tags, ',')
 GROUP BY value;
 
 ```
+### 26. Finding the Mode (Common Record)
+
+**Question:** Which product is most frequently bought?
+
+SQL
+
+```
+SELECT TOP 1 ProductID FROM OrderDetails
+GROUP BY ProductID ORDER BY COUNT(*) DESC;
+
+```
+
+### 27. The Anti-Join (Not Exists)
+
+**Question:** Find customers with no orders (Performance optimized).
+
+SQL
+
+```
+SELECT CustomerName FROM Customers C
+WHERE NOT EXISTS (SELECT 1 FROM Orders O WHERE O.CustomerID = C.CustomerID);
+
+```
+
+### 28. Business Days Calculation Logic
+
+Question: Describe the query logic.
+
+Answer: Calculate DATEDIFF(day, start, end). Subtract (DATEDIFF(week, start, end) * 2). Join with a Holidays table to subtract specific dates that fall between the range.
 
 ### 29. Update from Join
 
@@ -505,6 +714,20 @@ SET E.Salary = E.Salary * 1.15
 FROM Employees E
 JOIN Departments D ON E.DeptID = D.DeptID
 WHERE D.DeptName = 'Engineering';
+
+```
+### 30. Delete Duplicate Rows (The CTE Method)
+
+**Question:** Clean a table of duplicates based on Email, keeping the earliest ID.
+
+SQL
+
+```
+WITH CTE AS (
+    SELECT ID, ROW_NUMBER() OVER(PARTITION BY Email ORDER BY ID) as rnk
+    FROM Users
+)
+DELETE FROM CTE WHERE rnk > 1;
 
 ```
 
