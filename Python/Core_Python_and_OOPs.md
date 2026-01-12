@@ -23,13 +23,13 @@ This guide provides focused **100% on core Python and OOP** concepts only—no e
 4. `self` keyword and how it works
 5. `super()` function
 6. What are "Magic Methods" in Python, and why are they used?
-7. What is the difference between __init__ and __new__?
-8. How do __str__ and __repr__ differ?
+7. What is the difference between `__init__` and `__new__`?
+8. How do `__str__` and `__repr__` differ?
 9. Which magic method would you use to make an object "callable" like a function?
 10. How do you implement the "Context Manager" protocol (the with statement) in a class?
 11. What are the magic methods for operator overloading?
 12. How can you make a custom object behave like a container (list or dictionary)?
-13. What is the __slot__ magic attribute?
+13. What is the `__slots__` magic attribute?
 14. What's the Difference Between `is` and `==`?
 15. What's the Difference Between Class and Static Methods?
 16. Explain Memory Management in Python
