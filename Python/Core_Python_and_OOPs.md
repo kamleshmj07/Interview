@@ -148,12 +148,12 @@ This guide provides focused **100% on core Python and OOP** concepts only—no e
 ## COMMON INTERVIEW QUESTIONS WITH ANSWERS
 
 ### What is OOP and its 4 principles?
-**Answer**: Encapsulation, Inheritance, Polymorphism, Abstraction
+**Answer**: Object-Oriented Programming (OOP) is a programming "paradigm" or style that organizes software design around objects and it's associated behaviours. The 4 principles are Encapsulation, Inheritance, Polymorphism, Abstraction.
 
-- **Encapsulation**: Bundle data and methods; hide internal details using naming conventions (_private, __private)
-- **Inheritance**: Subclass inherits from superclass; reuse code
-- **Polymorphism**: Same method name, different behavior in different classes
-- **Abstraction**: Hide complexity; show only essential features
+- **Encapsulation**: This is the practice of keeping attributes and the behaviour bundled together inside a single unit i.e., the object. It also involves "hiding" the internal state of the object.
+- **Inheritance**: Inheritance allows one class (a "child") to adopt the attributes and methods of another class (a "parent"). This helps avoid repeating code and promotes reusability of code.
+- **Polymorphism**: In Polymorphism, the design allows different behavior/form in different classes under same representation.
+- **Abstraction**: Abstraction is about hiding complex implementation details and only showing the necessary features of an object. It reduces complexity by letting you focus on what an object does rather than how it does it.
 
 ### Difference between class and object
 **Answer** A class is a logical entity; an abstraction. An object is a physical entity that exists in memory at runtime.
@@ -165,29 +165,95 @@ This guide provides focused **100% on core Python and OOP** concepts only—no e
 **Answer** `self` is a adopted convention for the first parameter of an instance method within a class. It refers to the current instance (object) of the class.
 
 ### `super()` function
-**Answer** The `super()` function is a built-in function that returns a temporary proxy object of a parent (superclass) or sibling class, allowing you to access and call methods defined in that ancestor class from within a subclass.
+**Answer** The `super()` function is a built-in function that returns a temporary proxy object of a parent (superclass) or sibling class, allowing you to access and call methods defined in that parent class from within a subclass.
+
+```
+class Robot:
+    def __init__(self, name):
+        self.name = name
+        print(f"Robot {self.name} initialized.")
+
+    def say_hello(self):
+        print(f"Hello, I am {self.name}.")
+
+class CleaningRobot(Robot):
+    def __init__(self, name, battery_life):
+        # Use super() to call the Parent's __init__ method
+        super().__init__(name)
+        
+        # Add a new attribute specific to CleaningRobot
+        self.battery_life = battery_life
+        print(f"CleaningRobot {self.name} is ready with {self.battery_life}% battery.")
+
+# Creating an instance
+my_bot = CleaningRobot("Wall-E", 95)
+my_bot.say_hello()
+
+```
+`super()` isn't just for the `__init__` method. You can use it to extend the functionality of any method from the parent class.
+
+```
+class Bird:
+    def fly(self):
+        print("The bird flaps its wings.")
+
+class Eagle(Bird):
+    def fly(self):
+        # Call the parent behavior first
+        super().fly()
+        # Add specific behavior
+        print("The eagle soars high in the clouds!")
+
+hawk = Eagle()
+hawk.fly()
+```
 
 ### What are "Magic Methods" in Python, and why are they used?
-**Answer** Magic methods are special methods with fixed names that begin and end with double underscores (e.g., __init__, __str__). They invoked internally by the Python interpreter to perform specific operations.
+**Answer** Magic methods are special methods with fixed names that begin and end with double underscores (e.g., __init__, __str__).
+- They are invoked internally by the Python interpreter to perform specific operations.
+- They are used to implement operator overloading and to allow custom objects to interact seamlessly with Python's built-in syntax (like using + on a custom class or checking length with len()).
 
-They are used to implement operator overloading and to allow custom objects to interact seamlessly with Python's built-in syntax (like using + on a custom class or checking length with len()).
-
-### What is the difference between __init__ and __new__?
+### What is the difference between `__init__` and `__new__`?
 **Answer**
-__new__: This is the actual constructor. It is a static method that creates and returns a new instance of the class. It is rarely overridden unless you are working with immutable types (like int or str) or meta-programming.
+`__new__`: This is the actual constructor. It is a static method that creates and returns a new instance of the class. It is rarely overridden unless you are working with immutable types (like int or str) or meta-programming.
 
-__init__: This is the initializer. It is called after the instance has been created by __new__. It populates the object with attributes.
+`__init__`: This is the initializer. It is called after the instance has been created by `__new__`. It populates the object with attributes.
 
-Think of __new__ as building the house and __init__ as decorating the interior.
+Think of `__new__` as building the house and `__init__` as decorating the interior.
 
-### How do __str__ and __repr__ differ?
+### How do `__str__` and `__repr__` differ?
 **Answer** Both return a string representation of an object, but they serve different purposes:
 
-__str__: Aimed at the end-user. It should be readable and "informal." (Triggered by print() or str()).
+`__str__`: Aimed at the end-user. It should be readable and "informal." (Triggered by print() or str()).
 
-__repr__: Aimed at developers. It should be unambiguous and, if possible, look like the Python code used to create the object. (Triggered by typing the variable in a shell or repr()).
+`__repr__`: Aimed at developers. It should be unambiguous and, if possible, look like the Python code used to create the object. (Triggered by typing the variable in a shell or repr()).
 
-Note: If __str__ is not defined, Python will fall back to using __repr__.
+Note: If `__str__` is not defined, Python will fall back to using `__repr__`.
+```
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def __str__(self):
+        # What the user sees
+        return f"{self.year} {self.brand} {self.model}"
+
+    def __repr__(self):
+        # What the developer needs to recreate the object
+        return f"Car(brand='{self.brand}', model='{self.model}', year={self.year})"
+
+# Let's create an object
+my_car = Car("Toyota", "Corolla", 2022)
+
+# This calls __str__
+print(str(my_car))   # Output: 2022 Toyota Corolla
+print(my_car)        # Output: 2022 Toyota Corolla (print calls str by default)
+
+# This calls __repr__
+print(repr(my_car))  # Output: Car(brand='Toyota', model='Corolla', year=2022)
+```
 
 ### Which magic method would you use to make an object "callable" like a function?
 **Answer** You use the __call__ method. When this method is defined in a class, you can instantiate the class and then "call" that instance using parentheses.
