@@ -256,73 +256,128 @@ print(repr(my_car))  # Output: Car(brand='Toyota', model='Corolla', year=2022)
 ```
 
 ### Which magic method would you use to make an object "callable" like a function?
-**Answer** You use the __call__ method. When this method is defined in a class, you can instantiate the class and then "call" that instance using parentheses.
+**Answer** You use the `__call__` method. When this method is defined in a class, you can instantiate the class and then "call" that instance using parentheses.
 
-Example ------
-
+```
 class Greeter:
     def __call__(self, name):
         return f"Hello, {name}!"
 
 greet = Greeter()
 print(greet("Alice")) # Works like a function
-
----------------
+```
 
 ### How do you implement the "Context Manager" protocol (the with statement) in a class?
 **Answer** To make a class compatible with the with statement, you must implement:
 
-__enter__: Executed when the execution flow enters the context. It usually returns the resource (like a file or a database connection).
+`__enter__`: Executed when the execution flow enters the context. It usually returns the resource (like a file or a database connection).
 
-__exit__: Executed when the flow leaves the context. It handles teardown logic, such as closing a file or releasing a lock, even if an exception occurred.
+`__exit__`: Executed when the flow leaves the context. It handles teardown logic, such as closing a file or releasing a lock, even if an exception occurred.
+
+```
+class FileManager:
+    def __init__(self, filename, mode):
+        self.filename = filename
+        self.mode = mode
+        self.file = None
+
+    def __enter__(self):
+        print(f"--- Opening {self.filename} ---")
+        self.file = open(self.filename, self.mode)
+        return self.file  # This is what 'f' becomes in 'with ... as f'
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print(f"--- Closing {self.filename} ---")
+        if self.file:
+            self.file.close()
+        # If an error occurred, exc_type will not be None
+        if exc_type:
+            print(f"An error occurred: {exc_val}")
+        return True # Suppresses the exception (optional)
+
+# Using the context manager
+with FileManager("test.txt", "w") as f:
+    f.write("Hello, World!")
+    print("Writing data...")
+
+print("Done!")
+```
+
+#### The `__exit__` Parameters
+
+The three arguments in `__exit__` are used to handle errors:
+
+-   `exc_type`: The class of the exception (e.g., `ZeroDivisionError`).
+-   `exc_val`: The instance of the exception (the error message).
+-   `exc_tb`: The traceback object (the line numbers where it failed).
+
+If `__exit__` returns `True`, Python swallows the error. If it returns `False` (the default), the error continues to bubble up.
 
 ### What are the magic methods for operator overloading?
 **Answer** Python maps standard operators to specific dunder methods. Common examples include:
 
-Arithmetic: 
-__add__ (+)
-__sub__ (-)
-__mul__ (*)
-__truediv__ (/)
+Arithmetic:
+`__add__` (+)
+`__sub__` (-)
+`__mul__` (*)
+`__truediv__` (/)
 
 Comparison:
-__eq__ (==)
-__lt__ (<)
-__gt__ (>)
-__ne__ (!=)
+`__eq__` (==)
+`__lt__` (<)
+`__gt__` (>)
+`__ne__` (!=)
 
 Augmented Assignment:
-__iadd__ (+=)
-__isub__ (-=)
+`__iadd__` (+=)
+`__isub__` (-=)
 
 ### How can you make a custom object behave like a container (list or dictionary)?
 **Answer** To implement container-like behavior, you use the following:
 
-__len__: To support len(obj).
+`__len__`: To support len(obj).
 
-__getitem__: To support indexing/key lookup obj[key].
+`__getitem__`: To support indexing/key lookup obj[key].
 
-__setitem__: To support assignment obj[key] = value.
+`__setitem__`: To support assignment obj[key] = value.
 
-__delitem__: To support deleting items del obj[key].
+`__delitem__`: To support deleting items del obj[key].
 
-__iter__: To support iteration (e.g., in a for loop).
+`__iter__`: To support iteration (e.g., in a for loop).
 
-### What is the __slot__ magic attribute?
-**Answer** While technically an attribute rather than a method, __slots__ tells Python not to use a dynamic dictionary (__dict__) to store instance attributes. Instead, it allocates a fixed amount of space for a static set of attributes. This significantly reduces memory usage and slightly speeds up attribute access for classes with many instances.
+### What is the `__slots__` magic attribute?
+**Answer** While technically an attribute rather than a method, `__slots__` tells Python not to use a dynamic dictionary (`__dict__`) to store instance attributes. Instead, it allocates a fixed amount of space for a static set of attributes. This significantly reduces memory usage and slightly speeds up attribute access for classes with many instances. The class is called The Slotted Class.
+
+```
+class SlottedPlayer:
+    # Python will now reserve space ONLY for these two variables
+    __slots__ = ['name', 'level']
+
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
+
+p2 = SlottedPlayer("Bob", 5)
+
+# Attempting to add a new attribute will crash!
+try:
+    p2.health = 100
+except AttributeError as e:
+    print(f"Error: {e}") 
+    # Output: 'SlottedPlayer' object has no attribute 'health'
+```
 
 ### What's the Difference Between `is` and `==`?
 **Answer**
 - `==` compares **values**
 - `is` compares **identity** (same object in memory)
 
-Example ------
+```
 a = [1, 2, 3]
 b = [1, 2, 3]
 print(a == b)  # True (same values)
 print(a is b)  # False (different objects)
-
---------------
+```
 
 ### What's the Difference Between Class and Static Methods?
 **Answer**
