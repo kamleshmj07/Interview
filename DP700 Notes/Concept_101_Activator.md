@@ -105,4 +105,9 @@
 <h3 id="fabric-item-actions">Fabric item actions</h3>
 <p>Fabric item actions execute data pipelines or notebooks for other processing and analysis. Use Fabric items when you need to process more data or perform advanced analysis in response to evaluated conditions.</p>
 <p>With data sources connected, rules defined, and actions configured, you have everything needed for Activator to automatically take action when conditions occur in your streaming data.</p>
+<p>Learn More:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/fabric/real-time-intelligence/data-activator/activator-introduction">What is Fabric Activator</a></li>
+<li><a href="https://learn.microsoft.com/en-us/fabric/real-time-intelligence/data-activator/activator-rules-overview">Fabric Activator rules</a></li>
+</ul>
 
