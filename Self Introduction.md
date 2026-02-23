@@ -1,11 +1,9 @@
 ---
 
-
----
-
 <h3 id="short-intro-for-interview">Short Intro for Interview:</h3>
-<p>Hello, I’m Kamlesh Manjrekar, a Data Engineer with a Bachelor’s degree in Engineering from Mumbai University.<br>
-Over the past 11 years, I’ve gained extensive experience in designing scalable data pipelines, optimizing ETL processes, and building robust data architectures using Python, SQL, and worked with a few data integration tools.<br>
+<p>Hello, I’m Kamlesh Manjrekar, I am working as a Operations - Sr. Data Engineer with Doyen Info Solutions Ltd.<br>
+I have a Bachelor’s degree in Engineering from Mumbai University.<br>
+In my 11 years of experience, I began as a full stack developer, over time I specialized in backend development to tackle complex data and etl problems. Today, as a Senior Data Engineer I focus on designing data pipelines, , optimizing ETL processes and driving data to downstream systems.<br>
 Outside of work, I enjoy investing and exploring new destinations.</p>
 <h3 id="why-looking-for-a-change">Why looking for a change?</h3>
 <ul>
