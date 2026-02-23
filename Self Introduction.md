@@ -11,7 +11,7 @@ Outside of work, I enjoy investing and exploring new destinations.</p>
 <li>A very limited clarity or roadmap for my growth.</li>
 <li>Underutilization of my skills</li>
 <li>Lack of mentorship</li>
-<li>Complex communication****</li>
+<li>Poor collaboration practices</li>
 </ul>
 <h3 id="roles-and-responsibilities-based-on-the-projects-i-have-contributed">Roles and Responsibilities based on the projects I have contributed:</h3>
 <ul>
