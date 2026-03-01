@@ -22,12 +22,11 @@ Outside of work, I enjoy investing and exploring new destinations.
 
 ### Other day to day responsibilities:
 
--   Requirement analysis
--   Code reviews
--   Scalability planning
+-   Requirement analysis and stakeholder communication
+-   Code reviews and scalability planning
 -   Tech stack evaluation
 -   Backup and recovery
--   Stakeholder communication
+
 
 ### Projects (Current Organization):
 
@@ -36,7 +35,7 @@ Outside of work, I enjoy investing and exploring new destinations.
 
 -   Built a KPI dashboard using Streamlit and Altair for data visualization, performing Exploratory Data Analysis and creating interactive insights.
 -   Developed Power Bi Reports
--   The data modeling was based on JIRA data to track and analyze manufacturing project performance metrics and monitoring financial costs.
+-   The data modelling was based on JIRA data to track and analyse manufacturing project performance metrics and monitoring financial costs.
 
 ### Project (Previous Organizations):
 
@@ -45,7 +44,6 @@ Outside of work, I enjoy investing and exploring new destinations.
     -   Developed ETL processes to automate data loading from market feeds into a data warehouse.
     -   Implemented backend APIs and optimized data pipelines for efficient data distribution and fund-level portfolio analytics.
 2.  _Research Short Dashboard App:_
-    
     -   Built a dashboard app for monitoring short positions, integrating market data feeds from Bloomberg and Geneva.
     -   Developed workflows for Hedge Fund Research teams to review and revisit positions.
 3.  _Symbology Mapping Project:_
