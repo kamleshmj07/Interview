@@ -248,17 +248,17 @@ hawk.fly()
 
 
 ### What are "Magic Methods" in Python, and why are they used?
-**Answer** Magic methods are special methods with fixed names that begin and end with double underscores (e.g., __init__, __str__).
-- They are invoked internally by the Python interpreter to perform specific operations.
-- They are used to implement operator overloading and to allow custom objects to interact seamlessly with Python's built-in syntax (like using + on a custom class or checking length with len()).
+**Answer** Magic methods are methods that emulate built-in behaviours (e.g., __init__, __str__).
+- They are invoked internally by the Python interpreter to perform specific operations associated with Python syntax.
+- They can be used for operator overloading to allow objects to interact non traditionally with Python's built-in syntax (+, >, <, >=, <=).
 
 ### What is the difference between `__init__` and `__new__`?
 **Answer**
-`__new__`: This is the actual constructor. It is a static method that creates and returns a new instance of the class. It is rarely overridden unless you are working with immutable types (like int or str) or meta-programming.
+`__new__`: It creates and returns a new instance. It is rarely overridden unless you are working with immutable types (like int or str) or meta-programming. (example: creating a string class that always forces lowercase before the object even exists.)
 
-`__init__`: This is the initializer. It is called after the instance has been created by `__new__`. It populates the object with attributes.
+`__init__`: It is called after the instance has been created by `__new__`. It populates the object with attributes.
 
-Think of `__new__` as building the house and `__init__` as decorating the interior.
+Think of `__new__` as architect who is building the house and `__init__` as interior decorator who gives attribute and character to the house.
 
 ### How do `__str__` and `__repr__` differ?
 **Answer** Both return a string representation of an object, but they serve different purposes:
