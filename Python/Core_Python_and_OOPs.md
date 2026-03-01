@@ -165,8 +165,7 @@ This guide provides focused **100% on core Python and OOP** concepts only—no e
 **Answer** `self` is a adopted convention for the first parameter of an instance method within a class. It refers to the current instance (object) of the class.
 
 ### `super()` function
-**Answer** The `super()` function is a built-in function that returns a temporary proxy object of a parent (superclass) or sibling class, allowing you to access and call methods defined in that parent class from within a subclass.
-
+**Answer** The `super()` function provides us a mechanism that allows to instantiate an object of a parent (superclass) class within a child class. 
 ```
 class Robot:
     def __init__(self, name):
@@ -207,6 +206,46 @@ class Eagle(Bird):
 hawk = Eagle()
 hawk.fly()
 ```
+
+`super()` also supports  **dependency injection**  and more advanced patterns where the parent class might change dynamically.
+
+    class MainWriter:
+        def write(self, text):
+            print(f"Here I write: {text}")
+    
+    class UppercaseMixin:
+        def write(self, text):
+            # super() here acts like a placeholder. 
+            # It will refer to whatever class is next in the MRO.
+            super().write(text.upper())
+    
+    class BoldMixin:
+        def write(self, text):
+            super().write(f"**{text}**")
+    
+    
+    # Scenario A: Just a normal writer
+    class NormalWriter(MainWriter):
+	    pass
+    
+    # Scenario B: A writer that bolds and then uppercases
+    # MRO: [BoldUpperWriter -> BoldMixin -> UppercaseMixin -> MainWriter]
+    class BoldUpperWriter(BoldMixin, UppercaseMixin, MainWriter):
+	    pass
+    
+    # Scenario C: Just an uppercase writer
+    # MRO: [OnlyUpperWriter -> UppercaseMixin -> MainWriter]
+    class OnlyUpperWriter(UppercaseMixin, MainWriter):
+	    pass
+    
+    # Test them out
+    writer_obj_1 = BoldUpperWriter()
+    writer_obj_1.write("hello") # Output: Final Output: **HELLO**
+    
+    writer_obj_2 = OnlyUpperWriter()
+    writer_obj_2.write("hello") # Output: Final Output: HELLO
+
+
 
 ### What are "Magic Methods" in Python, and why are they used?
 **Answer** Magic methods are special methods with fixed names that begin and end with double underscores (e.g., __init__, __str__).
@@ -836,6 +875,10 @@ A very common interview task is to write a decorator that measures the execution
 --------- 4
 The Payment Processor
 Question: Design an ABC called PaymentProcessor with an abstract method `process_payment(amount)`. Then, create a `CreditCardProcessor` subclass. What happens if you forget to define `process_payment` in the subclass?
+
+
+
+
 
 
 
