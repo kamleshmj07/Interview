@@ -162,10 +162,10 @@ This guide provides focused **100% on core Python and OOP** concepts only—no e
 **Answer** It is the initializer for a class's new instances and is automatically called after an object has been created. It is commonly referred as "Constructor".
 
 ### `self` keyword and how it works
-**Answer** `self` is a adopted convention for the first parameter of an instance method within a class. It refers to the current instance (object) of the class.
+**Answer** `self` refers to the current instance (object) of the class.
 
 ### `super()` function
-**Answer** The `super()` function provides us a mechanism that allows to instantiate an object of a parent (superclass) class within a child class. 
+**Answer** The `super()` function allows to instantiate an object of a parent (superclass) class within a child class. 
 ```
 class Robot:
     def __init__(self, name):
@@ -189,7 +189,7 @@ my_bot = CleaningRobot("Wall-E", 95)
 my_bot.say_hello()
 
 ```
-`super()` isn't just for the `__init__` method. You can use it to extend the functionality of any method from the parent class.
+`super()` can also extend the functionality of any method from the parent class.
 
 ```
 class Bird:
@@ -248,17 +248,33 @@ hawk.fly()
 
 
 ### What are "Magic Methods" in Python, and why are they used?
-**Answer** Magic methods are special methods with fixed names that begin and end with double underscores (e.g., __init__, __str__).
-- They are invoked internally by the Python interpreter to perform specific operations.
-- They are used to implement operator overloading and to allow custom objects to interact seamlessly with Python's built-in syntax (like using + on a custom class or checking length with len()).
+**Answer** Magic methods are methods that emulate built-in behaviours (e.g., __init__, __str__).
+- They are invoked internally by the Python interpreter to perform specific operations associated with Python syntax.
+- They can be used for operator overloading to allow objects to interact non traditionally with Python's built-in syntax (+, >, <, >=, <=).
 
 ### What is the difference between `__init__` and `__new__`?
 **Answer**
-`__new__`: This is the actual constructor. It is a static method that creates and returns a new instance of the class. It is rarely overridden unless you are working with immutable types (like int or str) or meta-programming.
+`__new__`: It creates and returns a new instance. It is rarely overridden unless you are working with immutable types (like int or str) or meta-programming. (example: creating a string class that always forces lowercase before the object even exists.)
 
-`__init__`: This is the initializer. It is called after the instance has been created by `__new__`. It populates the object with attributes.
+`__init__`: It is called after the instance has been created by `__new__`. It populates the object with attributes.
 
-Think of `__new__` as building the house and `__init__` as decorating the interior.
+Think of `__new__` as architect who is building the house and `__init__` as interior decorator who gives attribute and character to the house.
+
+    class LowercaseString(str):
+        def __new__(cls, value):
+            # 1. Force the value to lowercase before creation
+            lower_value = str(value).lower()
+            
+            # 2. Call the parent (str) __new__ to actually create the object
+            # We pass the modified 'lower_value' instead of the original 'value'
+            return super().__new__(cls, lower_value)
+    
+    # Test it out
+    my_string = LowercaseString("HELLO World! 123")
+    
+    print(my_string)         # Output: hello world! 123
+    print(type(my_string))   # Output: <class '__main__.LowercaseString'>
+    print(my_string.upper()) # Output: HELLO WORLD! 123 (Normal methods still work)
 
 ### How do `__str__` and `__repr__` differ?
 **Answer** Both return a string representation of an object, but they serve different purposes:
@@ -875,6 +891,7 @@ A very common interview task is to write a decorator that measures the execution
 --------- 4
 The Payment Processor
 Question: Design an ABC called PaymentProcessor with an abstract method `process_payment(amount)`. Then, create a `CreditCardProcessor` subclass. What happens if you forget to define `process_payment` in the subclass?
+
 
 
 
