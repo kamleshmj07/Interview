@@ -162,10 +162,10 @@ This guide provides focused **100% on core Python and OOP** concepts only—no e
 **Answer** It is the initializer for a class's new instances and is automatically called after an object has been created. It is commonly referred as "Constructor".
 
 ### `self` keyword and how it works
-**Answer** `self` is a adopted convention for the first parameter of an instance method within a class. It refers to the current instance (object) of the class.
+**Answer** `self` refers to the current instance (object) of the class.
 
 ### `super()` function
-**Answer** The `super()` function provides us a mechanism that allows to instantiate an object of a parent (superclass) class within a child class. 
+**Answer** The `super()` function allows to instantiate an object of a parent (superclass) class within a child class. 
 ```
 class Robot:
     def __init__(self, name):
@@ -189,7 +189,7 @@ my_bot = CleaningRobot("Wall-E", 95)
 my_bot.say_hello()
 
 ```
-`super()` isn't just for the `__init__` method. You can use it to extend the functionality of any method from the parent class.
+`super()` can also extend the functionality of any method from the parent class.
 
 ```
 class Bird:
@@ -259,6 +259,22 @@ hawk.fly()
 `__init__`: It is called after the instance has been created by `__new__`. It populates the object with attributes.
 
 Think of `__new__` as architect who is building the house and `__init__` as interior decorator who gives attribute and character to the house.
+
+    class LowercaseString(str):
+        def __new__(cls, value):
+            # 1. Force the value to lowercase before creation
+            lower_value = str(value).lower()
+            
+            # 2. Call the parent (str) __new__ to actually create the object
+            # We pass the modified 'lower_value' instead of the original 'value'
+            return super().__new__(cls, lower_value)
+    
+    # Test it out
+    my_string = LowercaseString("HELLO World! 123")
+    
+    print(my_string)         # Output: hello world! 123
+    print(type(my_string))   # Output: <class '__main__.LowercaseString'>
+    print(my_string.upper()) # Output: HELLO WORLD! 123 (Normal methods still work)
 
 ### How do `__str__` and `__repr__` differ?
 **Answer** Both return a string representation of an object, but they serve different purposes:
@@ -875,6 +891,7 @@ A very common interview task is to write a decorator that measures the execution
 --------- 4
 The Payment Processor
 Question: Design an ABC called PaymentProcessor with an abstract method `process_payment(amount)`. Then, create a `CreditCardProcessor` subclass. What happens if you forget to define `process_payment` in the subclass?
+
 
 
 
